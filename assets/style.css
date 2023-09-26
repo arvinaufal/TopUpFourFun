@@ -1,3 +1,55 @@
+
+
+.container-raffi {
+    height: auto;
+    background-color: rgb(47, 47, 242);
+    margin: 0;
+}
+.navbar-brand-raffi h1{
+    font-size: 30px;
+    float: right;
+}
+.login-raffi {
+    background-color: blue;
+    color: white;
+    width: 200px;
+}
+section h2 {
+    text-align: center;
+    border: 3px solid orange;
+    background-color: antiquewhite;
+    width: 200px;
+    margin: 10px auto 0;
+}
+.menu-slider-raffi {
+    width: 900px;
+    height: 300px;
+    background-color: lightcyan;
+    margin: 0 auto;
+}
+.menu-popula-raffi {
+    width: 900px;
+    height: 300px;
+    background-color: lightcyan;
+    margin: 0 auto;
+}
+.menu-mobile-raffi {
+    width: 900px;
+    height: 300px;
+    background-color: lightcyan;
+    margin: 0 auto;
+}
+.menu-pc-raffi {
+    width: 900px;
+    height: 300px;
+    background-color: lightcyan;
+    margin: 0 auto;
+}
+footer {
+    width: auto;
+    height: 300px;
+    background-color: white;
+}
 /* ini css login form */
 body {
     margin: 0;
