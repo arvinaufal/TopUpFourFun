@@ -1,5 +1,5 @@
 
-
+/* css index */
 .container-raffi {
     height: auto;
     background-color: #00b4d8;
@@ -78,6 +78,7 @@ footer p {
     height: 25px;
     margin: 8px;
 }
+/* css index end */
 /* ini css login form */
 body {
     margin: 0;
@@ -94,6 +95,14 @@ body {
   }
   
   .login-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+
+  .register-container {
     background-color: #fff;
     padding: 30px;
     border-radius: 8px;
@@ -164,6 +173,11 @@ body {
 }
 
 #login-page {
+  background-image: url(../assets/photos/bg-login2.jpg);
+  background-size: cover;
+}
+
+#register-page {
   background-image: url(../assets/photos/bg-login2.jpg);
   background-size: cover;
 }
