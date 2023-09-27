@@ -38,7 +38,7 @@
     color: #053a77;
 }
 .navbar.active{
-    background-color: #0077b6 !important;
+    background-color: #5fa8d3 !important;
     box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.158);
 }
 .navbar .nav-link{
@@ -50,7 +50,7 @@
 }
 
 .navbar .nav-link.active{
-    color: #0077b6 !important;
+    color: #5fa8d3 !important;
     font-weight: 600;
 }
 .navbar .icons i{
@@ -65,7 +65,7 @@
 
 /* Home Start */
 .home{
-    background-color: #0077b6;
+    background-color: #5fa8d3;
     height: 100vh;
 }
 .home .row{
@@ -150,7 +150,7 @@
 
 /* Service Start */
 .service{
-    background-color: #0077b6;
+    background-color: #5fa8d3;
     border-radius: 50px 50px 0px 0px;
     padding-top: 70px;
 }
@@ -229,7 +229,7 @@
 /* Testimoni */
 .testimoni{
     margin-top: 200px;
-    background-color: #0077b6;
+    background-color: #5fa8d3;
     border-radius: 50px 50px 0px 0px;
     padding-top: 70px;
 }
@@ -258,7 +258,7 @@
 /* Footer */
 .footer{
     margin-top: 200px;
-    background-color: #0077b6;
+    background-color: #5fa8d3;
     border-radius: 50px 50px 0px 0px;
 }
 .footer .row-content{
@@ -296,6 +296,10 @@ margin-bottom: 30px;
 font-size: 20px;
 text-decoration: none;
 color: #000000;
+}
+
+.carousel-item{
+    margin-left: 8em !important;
 }
 
 
@@ -361,7 +365,7 @@ color: #000000;
     }
     .footer{
         margin-top: 100px;
-        background-color: #0077b6;
+        background-color: #5fa8d3;
         border-radius: 30px 30px 0px 0px;
     }
     .footer .row-content{
