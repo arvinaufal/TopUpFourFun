@@ -175,6 +175,15 @@
     font-size: 22px;
     font-weight: 600;
 }
+
+.btn-group {
+    font-family: 'Poppins';
+
+}
+
+.dropdown-menu {
+    font-family: 'Poppins';
+}
 /* Service End */
 
 /* product start */
