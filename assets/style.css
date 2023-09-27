@@ -130,3 +130,25 @@ body {
   }
   
 /* css login form end  */
+
+.swal2-popup {
+  font-family: 'Arial', sans-serif; /* Ganti 'Arial' dengan font pilihan Anda */
+}
+
+#login-page {
+  background-image: url(../assets/photos/bg-login2.jpg);
+  background-size: cover;
+}
+
+
+.logo-img {
+
+  display: flex;
+  margin-left: 30%;
+  margin-bottom: 0px;
+  width: 50%;
+  height: 100px;
+  background-image: url(../assets/photos/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}

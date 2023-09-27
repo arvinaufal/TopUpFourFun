@@ -70,3 +70,96 @@ let games = [
         harga: 111
     },
 ]
+
+
+// Contoh: Memainkan audio
+
+
+// Contoh: Mengubah volume
+document.getElementById("loginPageAudio").volume = 0.08; 
+
+
+let users = [
+    {
+        name: 'Admin Kel 4',
+        username: 'admin',
+        email: 'admin@gmail.com',
+        password: 'Admin123'
+    }
+];
+
+
+
+//Fungsi Login
+function login(){
+    let emailInput = document.getElementById('email').value;
+    let passwordInput = document.getElementById('password').value;
+
+    Swal.fire({
+        title: 'Mohon Tunggu',
+        showConfirmButton: false,
+        allowOutsideClick: false,
+        willOpen: () => {
+          Swal.showLoading()
+        }
+    });
+
+    for (const user of users) {
+        const {name, username, email, password} = user;
+        
+        if (password === passwordInput && email === emailInput) {
+            const user = {
+                name,
+                username,
+                email,
+            };
+
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+            users.push(user);
+            localStorage.setItem('users', JSON.stringify(users));
+
+            Swal.close();
+    
+            Swal.fire({
+                title: 'Berhasil!',
+                text: "Berhasil masuk, selamat datang!",
+                icon: 'success',
+                showCancelButton: false,
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'Ok',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '../pages/index.html';
+                }
+            })
+
+            break;
+        }else{
+            Swal.close();
+    
+            Swal.fire({
+                title: 'Gagal!',
+                text: "Email atau password salah!",
+                icon: 'error',
+                showCancelButton: false,
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'Ok',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '../pages/login.html';
+                }
+            });
+            break;
+        }
+    }
+
+
+
+    //Tambahan ketika udah login maka masukkan informasi email ke dalam localStorage
+}
