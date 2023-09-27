@@ -23,6 +23,8 @@ li {
     background-color: #0077b6;
     color: white;
     width: 200px;
+    border-radius: 8px;
+    margin: 1px 10px;
 }
 section h2 {
     text-align: center;
@@ -33,9 +35,11 @@ section h2 {
 }
 .menu-slider-raffi {
     width: 900px;
-    height: 300px;
+    height: auto;
     background-color: lightcyan;
     margin: 0 auto;
+    position: relative;
+
 }
 .menu-popular-raffi {
     width: 900px;
