@@ -1,3 +1,53 @@
+function createCategoriesTable() {
+    let gamesCategory = JSON.parse(localStorage.getItem('gamesCategory'));
+
+    if (!gamesCategory) {
+        gamesCategory = [];
+    }
+
+    if (gamesCategory.length < 1) {
+        let gamesCategoryLists = [
+            {
+                id : 1, 
+                nama : 'Battle Royale' ,
+                logo : '../assets/photos/game-category/br.png' ,
+            },
+            {
+                id : 2, 
+                nama : 'Multiplayer Online Battle Arena' ,
+                logo : '../assets/photos/game-category/moba.png' ,
+            },
+            {
+                id : 3, 
+                nama : 'Multiplayer Online Sandbox' ,
+                logo : '../assets/photos/game-category/mos.png' ,
+            },
+            {
+                id : 4, 
+                nama : 'Multiplayer Party Knockout Game' ,
+                logo : '../assets/photos/game-category/mpkg.png' ,
+            },
+            {
+                id : 5, 
+                nama : 'Online Multiplayer Strategy Game' ,
+                logo : '../assets/photos/game-category/omsg.png' ,
+            },
+            {
+                id : 6, 
+                nama : 'Open World Game' ,
+                logo : '../assets/photos/game-category/owg.png' ,
+            },
+           
+        ]
+
+        for (const gc of gamesCategoryLists) {
+            gamesCategory.push(gc);
+        }
+        localStorage.setItem('gamesCategory', JSON.stringify(gamesCategory));
+    }
+
+    showGamesCategory();
+}
 function createGamesTable() {
     let games = JSON.parse(localStorage.getItem('games'));
 
@@ -137,6 +187,46 @@ function createGamesTable() {
     showGames();
 }
 
+function createTestimonialsTable() {
+    let testimonials = JSON.parse(localStorage.getItem('testimonials'));
+
+    if (!testimonials) {
+        testimonials = [];
+    }
+
+    if (testimonials.length < 1) {
+        let testimonialsLists = [
+            {
+                id : 1, 
+                nama : 'Andi' ,
+                status : 'ProGamer' ,
+                testimoni : 'Saya senang, saya senang' ,
+            }, 
+            {
+                id : 2, 
+                nama : 'Dina' ,
+                status : 'Pro Gramer' ,
+                testimoni : 'Saya senang juga, saya senang juga' ,
+            },
+            {
+                id : 3, 
+                nama : 'Doni' ,
+                status : 'Programmer' ,
+                testimoni : 'Saya kayaknya senang juga, saya kayaknya senang juga' ,
+            },
+           
+           
+        ]
+
+        for (const gc of testimonialsLists) {
+            testimonials.push(gc);
+        }
+        localStorage.setItem('testimonials', JSON.stringify(testimonials));
+    }
+
+    showTestimonials();
+}
+
 function showGames(){
     let bungkus = document.getElementById('section-games-promo');
     let games = JSON.parse(localStorage.getItem('games'));
@@ -146,6 +236,7 @@ function showGames(){
    
     for (const game of games) {
         const {id, nama, logo, genre, item, harga} = game;
+        let rupiah = formatRupiah(harga);
         content += `
             <div class="swiper-slide position-relative card-holder">
                 <div class="card-arvi">
@@ -156,7 +247,7 @@ function showGames(){
                             <span class="badge badge-pill discount-precentage">${genre}</span>
                         </div>
                         <p class="mt-1 mb-0" style="font-size: 14px;">Start From:</p>
-                        <h5 class="mt-1" style="font-weight: bold;">Rp ${harga} <span style="font-size: 12px; color: #989898;">/10 diamonds</span> </h5>
+                        <h5 class="mt-1" style="font-weight: bold;">${rupiah} <span style="font-size: 12px; color: #989898;">/10 diamonds</span> </h5>
                         <div class="d-flex align-items-center">
                             <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
                             <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
@@ -174,10 +265,97 @@ function showGames(){
     bungkus.innerHTML = content; // Menetapkan konten baru ke elemen
 }
 
+function showGamesCategory(){
+    let bungkus = document.getElementById('section-gamecategory-lists');
+    let gamesCategory = JSON.parse(localStorage.getItem('gamesCategory'));
+
+
+    let content = ""; // Inisialisasi variabel string untuk menyimpan konten
+   
+    for (const gc of gamesCategory) {
+        const {id, nama, logo } = gc;
+        content += `
+                <div class="col-lg-4 col-md-6 mt-4 mt-md-0 mb-4">
+                    <a href="#" class="game-category-link">
+                        <div class="card-service d-flex align-items-center">
+                            <img src="${logo}" class="img-fluid img-section-gamelists" alt="" />
+                            <div class="detail">
+                                <h5>${nama}</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+        `;
+    }
+
+    bungkus.innerHTML = content; // Menetapkan konten baru ke elemen
+}
+
+function showTestimonials(){
+    let bungkus = document.getElementById('section-testimonials');
+    let testimonials = JSON.parse(localStorage.getItem('testimonials'));
+
+
+    let content = ""; // Inisialisasi variabel string untuk menyimpan konten
+   
+    for (const gc of testimonials) {
+        const {id, nama, status, testimoni } = gc;
+        content += `
+                <div class="swiper-slide card text-center py-2" style="border-radius: 20px;">
+                        
+                    <p class="name mb-0 mt-2 fw-bold">${nama}</p>
+                    <p class="address">${status}</p>
+                    <div class="card-body px-5 py-4 position-relative mx-auto">
+                    <i
+                        class="bx bxs-quote-left position-absolute top-0 start-0"
+                    ></i>
+                    <i
+                        class="bx bxs-quote-right position-absolute bottom-0 end-0"
+                    ></i>
+                    <p class="testi-text">
+                        ${testimoni}
+                    </p>
+                    </div>
+                </div>
+        `;
+    }
+
+    bungkus.innerHTML = content; // Menetapkan konten baru ke elemen
+}
+
+
+function showUserLoginStatus(){
+    let bungkus = document.getElementById('user-status');
+    let userLogin = JSON.parse(localStorage.getItem('loginUsers'));
+    console.log(userLogin);
+    if (userLogin !== null) {
+        let user = userLogin[userLogin.length - 1].name
+        bungkus.innerHTML = `
+
+        <i class="bx bxs-user" style="color: white; font-size: large;"> ${user}</i>
+        <div class="btn btn-primary btn-sm" onClick="logout()" style="border-radius: 20px; width: 80px; font-weight: bold; font-size: medium;">Logout</div>
+        `; // Menetapkan konten baru ke elemen
+    }else{
+        bungkus.innerHTML = `
+        
+            <div class="btn btn-primary btn-sm" style="border-radius: 20px; width: 80px; font-weight: bold; font-size: medium;"><a href="login.html" class="auth-link">Login</a></div>
+            <div class="btn btn-success btn-sm" style="border-radius: 20px; width: 80px; font-weight: bold; font-size: medium;"><a href="register.html" class="auth-link">Daftar</a></div>
+        `;
+    }
+}
+
+function logout(){
+    console.log('tes');
+}
+
+
+
 
 
 
 window.onload = function() {
     createGamesTable();
-    
+    createCategoriesTable();
+    createTestimonialsTable();
+    showUserLoginStatus();
 }

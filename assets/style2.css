@@ -27,7 +27,7 @@
     font-family: var(--heading-font);
     font-size: 32px;
     font-weight: 600;
-    color: #053a77;
+    color: white;
 }
 
 /* Navbar Start */
@@ -35,14 +35,14 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 36px;
-    color: #053a77;
+    color: white;
 }
 .navbar.active{
     background-color: #5fa8d3 !important;
     box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.158);
 }
 .navbar .nav-link{
-    color: #053a77 !important;
+    color: white !important;
     font-size: 18px;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
@@ -160,8 +160,8 @@
 .service .card-service{
     background-color: #fff;
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.05);
-    border-radius: 10px;
-    padding: 40px 30px;
+    border-radius: 20px;
+    padding: 20px 15px;
     max-width: 420px;
 }
 .service .card-service img{
@@ -348,6 +348,19 @@ color: #000000;
     display: flex;
     margin: 12px;
    
+  }
+
+  .img-section-gamelists {
+    border-radius: 20px;
+  }
+
+  .game-category-link {
+    color: black; /* Ganti dengan warna teks yang Anda inginkan */
+    text-decoration: none; 
+  }
+  .auth-link {
+    color: white; /* Ganti dengan warna teks yang Anda inginkan */
+    text-decoration: none; 
   }
 
 
