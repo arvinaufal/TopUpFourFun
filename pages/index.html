@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="../assets/photos/controller.svg" />
+    <link rel="icon" href="../assets/photos/logo.png" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -48,20 +48,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav m-auto">
-            <a class="nav-link active" href="#">Home</a>
-            <a class="nav-link" href="#">About</a>
-            <a class="nav-link" href="#">Services</a>
-            <a class="nav-link" href="#">Products</a>
-            <a class="nav-link" href="#">Testimoni</a>
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link active" href="#">Beranda</a>
+            <a class="nav-link" href="#kategori">Kategori</a>
+            <a class="nav-link" href="#promo">Promo</a>
+            <!-- <a class="nav-link" href="#">Products</a> -->
+            <a class="nav-link" href="#testimoni">Testimoni</a>
+            <!-- <a class="nav-link" href="#">Contact</a> -->
           </div>
-          <div class="icons mt-4 mt-sm-0 text-center">
-            <i class="bx bx-cart me-5 position-relative">
+          <div class="icons mt-4 mt-sm-0 text-center" id="user-status">
+            <!-- <i class="bx bx-cart me-5 position-relative">
               <div class="badge bg-danger rounded-pill position-absolute">
                 3
               </div>
-            </i>
-            <i class="bx bxs-user"></i>
+            </i> -->
+            
           </div>
         </div>
       </div>
@@ -136,29 +136,26 @@
     <!-- About End -->
 
     <!-- Service start -->
-    <section class="service section-margin pb-4" id="service">
+    <section class="service section-margin pb-4" id="kategori">
       <div class="container">
         <div class="row row-title text-center">
           <div class="col-lg-7 mx-auto">
-            <p class="label">WHAT WE SERVE</p>
-            <h3 class="heading-section">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, deserunt.
+            <!-- <p class="label">Kategori Game</p> -->
+            <h3 class="heading-section" style="color: white;">
+              Kategori Game
             </h3>
           </div>
         </div>
-        <div class="row row-content justify-content-center" id="section-gamelists">
+        <div class="row row-content justify-content-center" id="section-gamecategory-lists">
          
-          <div class="col-lg-4 col-md-6 mt-4 mt-md-0 mb-4">
+          <!-- <div class="col-lg-4 col-md-6 mt-4 mt-md-0 mb-4">
             <div class="card-service d-flex align-items-center">
-              <img src="./../assets/photos/mlbb.jpg" class="img-fluid" alt="" />
+              <img src="./../assets/photos/mlbb.jpg" class="img-fluid img-section-gamelists" alt="" />
               <div class="detail">
-                <h5>Game</h5>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, necessitatibus!
-                </p>
+                <h5>Open World</h5>
               </div>
             </div>
-          </div>
+          </div> -->
         
         </div>
       </div>
@@ -166,12 +163,11 @@
     <!-- Service End -->
 
     <!-- Product Start -->
-    <section class="product section-margin" id="product">
+    <section class="product section-margin" id="promo">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <p class="label">GAMES</p>
-            <h1 class="heading-section">GAMES PROMO</h1>
+            <h1 class="heading-section" style="color: #053a77;">GAMES PROMO</h1>
           </div>
           <div class="col-lg-6 text-end toggle-slider mt-4 mt-md-0">
             <i class="bx bxs-chevron-left-circle me-2"></i>
@@ -232,20 +228,19 @@
     </section>
 
     <!-- Testimoni Start-->
-    <section class="testimoni pb-3">
+    <section class="testimoni pb-3" id="testimoni">
       <div class="container">
         <div class="row text-center">
           <div class="col-12">
-            <p class="label">TESTIMONI</p>
-            <h3 class="heading-section">What Other People Say</h3>
+            <h3 class="heading-section">Testimoni</h3>
           </div>
         </div>
-        <div class="row row-content">
+        <div class="row row-content" style="margin-top: 40px; margin-bottom: 20px;">
           <div class="col-12">
             <!-- Swiper -->
             <div class="swiper mySwiperTesti">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide card text-center py-4">
+              <div class="swiper-wrapper" id="section-testimonials">
+                <!-- <div class="swiper-slide card text-center py-2">
                   <img
                     src=""
                     class="img-user mx-auto"
@@ -265,70 +260,8 @@
                       Pariatur aliquam perferendis reiciendis ab in nulla?
                     </p>
                   </div>
-                </div>
-                <div class="swiper-slide card text-center py-4">
-                  <img
-                    src=""
-                    class="img-user mx-auto"
-                    alt=""
-                  />
-                  <p class="name mb-0 mt-2 fw-bold">Leslie Alexander</p>
-                  <p class="address">Malang, East Java</p>
-                  <div class="card-body px-5 py-4 position-relative mx-auto">
-                    <i
-                      class="bx bxs-quote-left position-absolute top-0 start-0"
-                    ></i>
-                    <i
-                      class="bx bxs-quote-right position-absolute bottom-0 end-0"
-                    ></i>
-                    <p class="testi-text">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Pariatur aliquam perferendis reiciendis ab in nulla?
-                    </p>
-                  </div>
-                </div>
-                <div class="swiper-slide card text-center py-4">
-                  <img
-                    src=""
-                    class="img-user mx-auto"
-                    alt=""
-                  />
-                  <p class="name mb-0 mt-2 fw-bold">Leslie Alexander</p>
-                  <p class="address">Malang, East Java</p>
-                  <div class="card-body px-5 py-4 position-relative mx-auto">
-                    <i
-                      class="bx bxs-quote-left position-absolute top-0 start-0"
-                    ></i>
-                    <i
-                      class="bx bxs-quote-right position-absolute bottom-0 end-0"
-                    ></i>
-                    <p class="testi-text">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Pariatur aliquam perferendis reiciendis ab in nulla?
-                    </p>
-                  </div>
-                </div>
-                <div class="swiper-slide card text-center py-4">
-                  <img
-                    src="../assets/photos/testi1.svg"
-                    class="img-user mx-auto"
-                    alt=""
-                  />
-                  <p class="name mb-0 mt-2 fw-bold">Leslie Alexander</p>
-                  <p class="address">Malang, East Java</p>
-                  <div class="card-body px-5 py-4 position-relative mx-auto">
-                    <i
-                      class="bx bxs-quote-left position-absolute top-0 start-0"
-                    ></i>
-                    <i
-                      class="bx bxs-quote-right position-absolute bottom-0 end-0"
-                    ></i>
-                    <p class="testi-text">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Pariatur aliquam perferendis reiciendis ab in nulla?
-                    </p>
-                  </div>
-                </div>
+                </div> -->
+              
               </div>
             </div>
           </div>
@@ -463,6 +396,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     </div>
+    <script src="/assets/function.js"></script>
     <script src="/assets/index.js"></script>
     <script src="/assets/script2.js"></script>
 </html>
