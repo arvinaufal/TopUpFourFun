@@ -22,38 +22,28 @@ function login(){
     let emailInput = document.getElementById('email-login').value;
     let passwordInput = document.getElementById('password-login').value;
 
-    Swal.fire({
-        title: 'Mohon Tunggu',
-        showConfirmButton: false,
-        allowOutsideClick: false,
-        willOpen: () => {
-          Swal.showLoading()
-        }
-    });
+    let userFound = false;
 
     for (const user of users) {
         const {name, username, email, password} = user;
-        
+
         if (password === passwordInput && email === emailInput) {
-            const user = {
+            const loggedInUser = {
                 name,
                 username,
                 email,
             };
 
-
             let loginUsers = JSON.parse(localStorage.getItem('loginUsers')) || [];
-            let userExists = loginUsers.some(user => user.email === emailInput);
-            // console.log(loginUsers);
-            // console.log(userExists);
 
-            if (!userExists) {
-                loginUsers.push(user);
-                localStorage.setItem('loginUsers', JSON.stringify(loginUsers));
-            }
+            // Hapus pengguna sebelumnya dari data login
+            loginUsers = loginUsers.filter(user => user.email !== emailInput);
+
+            loginUsers.push(loggedInUser);
+            localStorage.setItem('loginUsers', JSON.stringify(loginUsers));
 
             Swal.close();
-    
+
             Swal.fire({
                 title: 'Berhasil!',
                 text: "Berhasil masuk, selamat datang!",
@@ -68,43 +58,43 @@ function login(){
                 if (result.isConfirmed) {
                     window.location.href = '../pages/index.html';
                 }
-            })
-
-            break;
-        }else{
-            Swal.close();
-    
-            Swal.fire({
-                title: 'Gagal!',
-                text: "Email atau password salah!",
-                icon: 'error',
-                showCancelButton: false,
-                confirmButtonColor: '#3085d6',
-                confirmButtonText: 'Ok',
-                allowOutsideClick: false,
-                allowEscapeKey: false,
-                allowEnterKey: false,
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    window.location.href = '../pages/login.html';
-                }
             });
+
+            userFound = true;
             break;
         }
     }
 
-
-
-    //Tambahan ketika udah login maka masukkan informasi email ke dalam localStorage
+    if (!userFound) {
+        Swal.fire({
+            title: 'Gagal!',
+            text: "Email atau password salah!",
+            icon: 'error',
+            showCancelButton: false,
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Ok',
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            allowEnterKey: false,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = '../pages/login.html';
+            }
+        });
+    }
 }
 
 
+
+
+
+
 function register(){
-    let namaInput = document.getElementById('nama-register').value;
-    let usernameInput = document.getElementById('username-register').value;
+    
     let emailInput = document.getElementById('email-register').value;
     let passwordInput = document.getElementById('password-register').value;
-    let passwordKonfirmasiInput = document.getElementById('password-register-konfirmasi').value;
+    let passwordKonfirmasiInput = document.getElementById('konfirmasi-password-register').value;
+
 
     Swal.fire({
         title: 'Mohon Tunggu',
@@ -115,15 +105,16 @@ function register(){
         }
     });
 
-    for (const user of users) {
-        const {name, username, email, password} = user;
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+        let emailUserExists = users.some(user => user.email === emailInput);
+   
         
-        if (username === usernameInput || email === emailInput) {
+        if (emailUserExists) {
             Swal.close();
     
             Swal.fire({
                 title: 'Gagal!',
-                text: "Email atau username sudah terdaftar!",
+                text: "Email sudah terdaftar!",
                 icon: 'error',
                 showCancelButton: false,
                 confirmButtonColor: '#3085d6',
@@ -136,8 +127,7 @@ function register(){
                     window.location.href = '../pages/register.html';
                 }
             });
-            break;
-
+         
 
            
         }else{
@@ -145,24 +135,32 @@ function register(){
             if (passwordInput !== passwordKonfirmasiInput) {
                 Swal.close();
     
-            Swal.fire({
-                title: 'Gagal!',
-                text: "Password dan konfirmasi password belum sesuai!",
-                icon: 'error',
-                showCancelButton: false,
-                confirmButtonColor: '#3085d6',
-                confirmButtonText: 'Ok',
-                allowOutsideClick: false,
-                allowEscapeKey: false,
-                allowEnterKey: false,
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    window.location.href = '../pages/register.html';
-                }
-            });
-            break;
+                Swal.fire({
+                    title: 'Gagal!',
+                    text: "Password dan konfirmasi password belum sesuai!",
+                    icon: 'error',
+                    showCancelButton: false,
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'Ok',
+                    allowOutsideClick: false,
+                    allowEscapeKey: false,
+                    allowEnterKey: false,
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = '../pages/register.html';
+                    }
+                });
+               
 
             }else{
+                let user = {
+                    name: emailInput,
+                    username: emailInput,
+                    email: emailInput,
+                    password: passwordInput
+                };
+                users.push(user);
+                localStorage.setItem('users', JSON.stringify(users));
 
                 Swal.close();
     
@@ -182,12 +180,12 @@ function register(){
                     }
                 })
     
-                break;
+             
 
             }
            
         }
-    }
+    
 
 
 
