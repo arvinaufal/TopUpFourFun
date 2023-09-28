@@ -542,6 +542,10 @@ function showUserLoginStatus(){
         let hargaGame = 0;
         let totalDms = 0;
         let item = '';
+
+        if (!payment) {
+            payment = 'Belum memilih metode pembayaran'
+        }
         for (const i of games) {
     
             if (i.id === gameId) {
@@ -596,12 +600,32 @@ function showUserLoginStatus(){
         let games = JSON.parse(localStorage.getItem('games'));
         let gameId = cart.gameId;
         let payment = cart.payment;
+
+        if (cart.paymentHarga) {
+            
+            let paymentHarga = cart.paymentHarga;
+        }
         let totalBayar = 0;
         let hargaGame = 0;
         let totalDms = 0;
         let item = '';
         let playerIds = cart.playerId;
         let totalUserId = playerIds.length;
+
+        if (!payment) {
+            Swal.fire({
+                title: 'Gagal!',
+                text: "Mohon memilih metode pembayaran terlebih dahulu!",
+                icon: 'error',
+                showCancelButton: false,
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'Ok',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false,
+            });
+            return;
+        }
 
         for (const i of games) {
     
@@ -641,7 +665,8 @@ function showUserLoginStatus(){
                 totalDms += jmlDm;
             }
         }
-
+        let paymentHarga = cart.paymentHarga;
+        totalBayar += paymentHarga;
         let harga = formatRupiah(totalBayar);
 
         Swal.fire({
@@ -674,6 +699,7 @@ function showUserLoginStatus(){
         }).then((result) => {
             if (result.isConfirmed) {
                 // Panggil fungsi untuk bayar sekarang
+                handlePayNow();
             } else if (result.dismiss === Swal.DismissReason.cancel) {
                 // Modal akan tertutup
             }
@@ -685,7 +711,79 @@ function showUserLoginStatus(){
         // Lakukan apa yang diperlukan untuk memproses pembayaran sekarang
         // Misalnya, Anda dapat mengambil data dari formulir menggunakan
         // document.getElementById('elementId').value dan melanjutkan dengan proses pembayaran.
+        let timerInterval
+        Swal.fire({
+        title: 'Mohon tunggu!',
+        html: 'Proses pembayaran sedang berlangsung',
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: () => {
+            Swal.showLoading()
+            const b = Swal.getHtmlContainer().querySelector('b')
+            timerInterval = setInterval(() => {
+            b.textContent = Swal.getTimerLeft()
+            }, 100)
+        },
+        willClose: () => {
+            clearInterval(timerInterval)
+        }
+        }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+            Swal.fire({
+                title: 'Berhasil!',
+                text: "Pembayaran berhasil!",
+                icon: 'success',
+                showCancelButton: false,
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'Ok',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // localStorage.clear();
+                    localStorage.removeItem("cart");
+
+                    window.location.href = '../pages/index.html';
+                }
+            });
+        }
+        })
     }
+
+
+    function updateMetode(params) {
+        let cart = JSON.parse(localStorage.getItem('cart'));
+        if (params == 1) {
+            cart.payment = 'Qris';
+            cart.paymentHarga = 1500;
+        }
+        if (params == 2) {
+            cart.payment = 'Gopay';
+            cart.paymentHarga = 2500;
+    
+        }
+        if (params == 3) {
+            cart.payment = 'Ovo';
+            cart.paymentHarga = 1500;
+    
+        }
+        if (params == 4) {
+            cart.payment = 'Bank';
+            cart.paymentHarga = 3500;
+    
+        }
+        if (params == 5) {
+            cart.payment = 'Alfamart';
+            cart.paymentHarga = 2500;
+    
+        }
+        
+        localStorage.setItem('cart', JSON.stringify(cart));
+        getDetailPembayaran();
+    }
+    
     
 
 

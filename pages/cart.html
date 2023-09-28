@@ -111,56 +111,68 @@
         <h1>Pilih Pembayaran</h1>
         <div class="box-isi-pembayaran mb-4">
             <label class="radio-label">
-                <input type="radio" class="radio-pembayaran" name="radio">
+                <input type="radio" class="radio-pembayaran" name="radio" onclick="updateMetode(1)">
                 <span class="checkmark"></span>
             </label>
-            <div class="logo"><img src="/photo/gopay.png"></div>
-            <div class="jumlah-harga">Rp. 100.000</div>
-            <div class="bawah-box-pembayaran">Bayar dengan GoPay</div>
+            <div class="logo"><img src="../assets/photos/payment/qris copy.png"></div>
+            <div class="jumlah-harga">Rp. 1.500</div>
+            <div class="bawah-box-pembayaran">Bayar dengan Qris</div>
         </div>
 
         <div class="box-isi-pembayaran">
           <label class="radio-label">
-              <input type="radio" class="radio-pembayaran" name="radio">
+              <input type="radio" class="radio-pembayaran" name="radio" onclick="updateMetode(2)">
               <span class="checkmark"></span>
           </label>
           <div class="logo"><img src="/photo/gopay.png"></div>
-          <div class="jumlah-harga">Rp. 100.000</div>
+          <div class="jumlah-harga">Rp. 2.500</div>
           <div class="bawah-box-pembayaran">Bayar dengan GoPay</div>
       </div>
       <div class="box-isi-pembayaran">
         <label class="radio-label">
-            <input type="radio" class="radio-pembayaran" name="radio">
+            <input type="radio" class="radio-pembayaran" name="radio" onclick="updateMetode(3)">
             <span class="checkmark"></span>
         </label>
-        <div class="logo"><img src="/photo/gopay.png"></div>
-        <div class="jumlah-harga">Rp. 100.000</div>
-        <div class="bawah-box-pembayaran">Bayar dengan GoPay</div>
+        <div class="logo"><img src="../assets/photos/payment/ovo.jpeg"></div>
+        <div class="jumlah-harga">Rp. 1.500</div>
+        <div class="bawah-box-pembayaran">Bayar dengan Ovo</div>
     </div>
     <div class="box-isi-pembayaran">
       <label class="radio-label">
-          <input type="radio" class="radio-pembayaran" name="radio">
+          <input type="radio" class="radio-pembayaran" name="radio" onclick="updateMetode(4)">
           <span class="checkmark"></span>
       </label>
-      <div class="logo"><img src="/photo/gopay.png"></div>
-      <div class="jumlah-harga">Rp. 100.000</div>
-      <div class="bawah-box-pembayaran">Bayar dengan GoPay</div>
+      <div class="logo"><img src="../assets/photos/payment/logo-semua-bank-14.png"></div>
+      <div class="jumlah-harga">Rp. 3.500</div>
+      <div class="bawah-box-pembayaran">Bayar dengan Virtual Account</div>
   </div>
   <div class="box-isi-pembayaran">
     <label class="radio-label">
-        <input type="radio" class="radio-pembayaran" name="radio">
+        <input type="radio" class="radio-pembayaran" name="radio" onclick="updateMetode(5)">
         <span class="checkmark"></span>
     </label>
-    <div class="logo"><img src="/photo/gopay.png"></div>
-    <div class="jumlah-harga">Rp. 100.000</div>
-    <div class="bawah-box-pembayaran">Bayar dengan GoPay</div>
+    <div class="logo"><img src="../assets/photos/payment/logo-alfamart.jpg"></div>
+    <div class="jumlah-harga">Rp. 2.500</div>
+    <div class="bawah-box-pembayaran">Bayar melalui Alfamart</div>
+  </div>
 </div>
     </div>
     
     </section>
 
+
     <section>
-      <div class="btn btn-primary" onclick="generateInvoice()">generate invoice</div>
+      <div class="box-detail-pembayaran" id="detail-pembayaran">
+        <!-- <div class="nomor">4</div>
+        <h1>Masukkan Detail Anda</h1>
+        <p>Silahkan masukkan email Anda untuk menerima bukti pembelian Anda</p>
+        <input type="email" class="email-control" placeholder="Masukkan Alamat E-mail Anda">
+        <div class="clear"></div>
+        <div class="detail-akhir">500 diamond • GoPay</div>
+        <button class="buy-control" type="submit">Beli Sekarang</button>
+        <div class="harga">Rp. 100.000</div> -->
+    </div>
+
     </section>
 
   
