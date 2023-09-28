@@ -194,6 +194,29 @@ function register(){
     //Tambahan ketika udah login maka masukkan informasi email ke dalam localStorage
 }
 
+function logout(){
+    localStorage.removeItem('loginUsers');
+
+    Swal.fire({
+        title: 'Logout Berhasil',
+        text: 'Anda berhasil logout!',
+        icon: 'success',
+        showCancelButton: false,
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'OK',
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        allowEnterKey: false,
+    }).then((result) => {
+        if(result.isConfirmed){
+            window.location.href = '../pages/login.html';
+        }
+    });
+}
+
+docment.getElementById('logoutButton').addEventListener('click',function(){
+    logout();
+});
 // Panggil fungsi ini saat halaman dimuat
 window.onload = function() {
     createAdminUser();
