@@ -66,6 +66,7 @@ function createGamesTable() {
                 harga: 3000,
                 categoryId: 6,
                 popular: 1,
+                banner : '../',
                 deskripsi: 'Genshin Impact adalah permainan yang bergenre dunia terbuka (open world) sekaligus bermain peran aksi. Pada permainan ini, pemain memungkinkan untuk mengendalikan salah satu karakter yang dapat digantikan di dalam sebuah party (kelompok). Karakter-karakter yang ditukarkan dapat dilakukan dengan cepat selama melakukan kombat sehingga memungkinkan pemain untuk menggunakan kombinasi kemampuan dan serangan yang berbeda. Karakter yang dapat memiliki kemampuan diperkuat dengan berbagai cara, seperti menaikkan level-nya secara langsung dan memperkuat artefak beserta senjata yang dapat digunakan oleh seorang karakter.Selain berpetualang, pemain dapat mencoba berbagai tantangan untuk mendapatkan hadiah.'
             },
             {
@@ -77,6 +78,7 @@ function createGamesTable() {
                 harga: 10000,
                 categoryId: 5,
                 popular: 0,
+                banner : '../assets/photos/bannerC/bannerCOC.webp',
                 deskripsi: 'Clash of Clans adalah permainan multipemain daring yang pemainnya membentuk komunitas yang disebut klan, melatih pasukan, dan menyerang pemain lain untuk mendapatkan sumber daya. Ada empat mata uang atau sumber daya dalam permainan.Emas dan elixir dapat digunakan untuk membangun dan meningkatkan pertahanan dan jebakan yang melindungi desa pemain dari serangan pemain lain dan untuk membangun serta meningkatkan bangunan. Elixir dan elixir hitam juga digunakan untuk melatih dan meningkatkan pasukan dan mantra. Permata adalah mata uang premium. Serangan dinilai pada skala bintang tiga dan memiliki durasi waktu maksimum tiga menit.'
             },
             {
@@ -88,6 +90,7 @@ function createGamesTable() {
                 harga: 12000,
                 categoryId: 1,
                 popular: 0,
+                banner : '../assets/photos/bannerC/bannerFF.png',
                 deskripsi: 'Gameplay Free Fire adalah dimana semua pemain dikerahkan dengan pesawat dan wajib melakukan terjun bebas. Tiap pemain juga harus mencari senjata dan peralatan medis ketika dikirim untuk bertarung melawan pemain lain dan bertahan hidup. Di tengah permainan nanti akan ada pesawat yang lewat dan meluncurkan airdrop dalam bentuk kotak besar berisi rompi anti peluru, helm, senjata khusus seperti AWM, Groza[12], M79 dan M249[13] ataupun senapan mesin. Menemukan airdrop juga tidak sulit. Sebelum airdrop turun, akan terlihat sebuah tanda berbentuk airdrop dengan parasut yang akan muncul di minimap. Kotak ini akan memancarkan garis vertikal atau lurus dari langit dengan cahaya kuningnya. Untuk lebih memanjakan pemain, Free Fire memberi indikator untuk barang-barang dalam airdrop. Jika semuanya telah diambil, cahayanya akan hilang, dan sebaliknya cahayanya akan tetap menyala jika ada elemen yang belum diambil. Tetapi setelah beberapa waktu, cahaya tersebut juga akan hilang walaupun item di dalamnya masih ada, hanya ada seberkas cahaya kuning di tepi airdropnya. Pada waktu-waktu tertentu permainan, Zona Bahaya akan muncul, lingkaran zona bahaya akan berwarna merah jika dilihat dari peta. Di daerah-daerah tertentu dari zona bahaya akan terjadi ledakan.'
             },
             {
@@ -99,6 +102,7 @@ function createGamesTable() {
                 harga: 4000,
                 categoryId: 3,
                 popular: 0,
+                banner : '../',
                 deskripsi: 'Growtopia adalah permainan video kotak pasir MMO 2D di mana hampir semua yang ada di gim ini dapat tumbuh dari biji pohon. Tidak ada tujuan. Namun, ada sistem pencapaian, pencarian epik, dan pencarian lainnya dari NPC. Pemain dapat mengunjungi dunia orang lain atau menciptakan dunia mereka sendiri. Ketika seorang pemain menciptakan dunia baru, dunia akan dihasilkan secara prosedural. Dunia di Growtopia memiliki ukuran yang sama, kecuali dunia khusus (seperti TINY). Pemain dapat mematahkan dan membangun balok, mendapatkan biji atau permata dari balok, menanam benih, dan memanen pohon. Pemain tidak dapat melakukan aktivitas ini jika dunia atau area yang mereka pukul dikunci oleh orang lain'
             },
             // {
@@ -118,6 +122,7 @@ function createGamesTable() {
                 harga: 8000,
                 categoryId: 2,
                 popular: 1,
+                banner : '../assets/photos/bannerC/bannerML.png',
                 deskripsi: 'Mobile Legends adalah permainan MOBA yang dirancang untuk ponsel. Kedua tim masing-masing berisi lima orang berjuang untuk mencapai dan menghancurkan markas musuh sambil mempertahankan markas mereka sendiri untuk mengendalikan tiga jalur, yang dikenal sebagai jalur "atas", "tengah" dan "bawah", yang menghubung ke setiap markas. Di masing-masing tim, ada lima pemain yang mengendalikan avatar sendiri-sendiri, yang dikenal sebagai "hero", dari perangkat mereka sendiri. Karakter lemah yang dikendalikan komputer disebut "minion", yang bersarang di markas tim lalu menyebar ke tiga jalur dan melawan menara serta lawan yang menghadang.Mengumpulkan EXP berguna untuk menaikkan level hero saat permainan berlangsung.'
             },
             {
@@ -129,6 +134,7 @@ function createGamesTable() {
                 harga: 3000,
                 categoryId: 5,
                 popular: 0,
+                banner : '../assets/photos/bannerC/bannerSOV.jpg',
                 deskripsi: 'Game RPG perang zombie tempat Anda berjuang untuk bertahan hidup dalam kiamat. Enam bulan telah berlalu sejak kiamat zombie dimulai. Virus ini telah menginfeksi kota-kota. Enam bulan teror, kematian, kengerian, perjuangan untuk bertahan hidup, dan melawan zombie dan monster dalam RPG petualangan multipemain ini. Ciptakan aliansi dan bangun kota untuk melawan gerombolan zombie demi bertahan hidup.'
             },
             // {
@@ -148,6 +154,7 @@ function createGamesTable() {
                 harga: 6000,
                 categoryId: 5,
                 popular: 1,
+                banner : '../assets/photos/bannerC/bannerCR.webp',
                 deskripsi : 'Clash Royale adalah game buatan Supercell bertema kerajaan fantasi[1], yang karakter-karakter di dalamnya sebagian diambil dari game saudaranya yakni Clash of Clans. Clash Royale adalah salah satu game yang para pemainnya bertemu satu sama lain secara online, dan berusaha untuk saling menghancurkan menara ratu dan menara raja, dengan cara mengerahkan pasukan berupa sebuah kartu yang akan menjadi hidup saat dimainkan. Ada banyak sekali jenis kartu yang ada di dalam game ini, mulai dari yang memiliki kelangkaan yang rendah yaitu kartu biasa sampai kelangkaan tertinggi yakni kartu jawara, kartu - kartu tersebut didapatkan dengan cara membuka peti, membelanjakan emas, atau menggunakan token acara untuk membeli kartu di toko token.'
             },
             {
@@ -159,6 +166,7 @@ function createGamesTable() {
                 harga: 8600,
                 categoryId: 6,
                 popular: 1,
+                banner : '../',
                 deskripsi: 'Hogwarts Legacy adalah permainan bermain peran aksi yang dimainkan dalam sudut pandang orang ketiga. Itu diatur di Sekolah Sihir Hogwarts dan daerah sekitarnya, dipengaruhi oleh waralaba Dunia Sihir. Selama pembuatan karakter, pemain dapat memilih penampilan karakter, jenis kelamin, suara, dan tipe tubuh. Mereka juga dapat memilih salah satu dari empat Asrama Hogwarts. Saat pemain melanjutkan permainan, karakter pemain mereka belajar merapal mantra, membuat ramuan, dan menguasai kemampuan bertarung, yang pada akhirnya mengembangkan gaya bertarung khusus mereka sendiri. Melalui tantangan dalam game, karakter pemain dapat memperoleh poin pengalaman untuk mendapatkan level, yang memungkinkan pemain mengakses dan meningkatkan berbagai mantra, bakat, dan kemampuan.'
             },
             {
@@ -170,6 +178,7 @@ function createGamesTable() {
                 harga: 6700,
                 categoryId: 4,
                 popular: 0,
+                banner : '../assets/photos/bannerC/bannerSTUMBLEGUYS.jpg',
                 deskripsi: 'Stumble Guys adalah suatu game online berbasis multiplayer royale yang dikeluarkan oleh pengembang Kitka Games. Dalam rating Play Store, Stumble Guys mendapatkan skor rating 4.2 dari para pengunduhnya. Game ini sendiri membutuhkan ruang memori kosong sebesar 103 Megabyte saat akan diinstal. Berdasarkan informasi yang ditampilkan di Play Store, Stumble Guys telah diunduh di lebih dari 10 juta kali.Stumble Guys merupakan permainan yang cukup seru jika ingin dimainkan bersama teman tongkrongan. Dalam fitur game Stumble Guys, para pemain dapat membuat ruangan yang memiliki kode untuk dibagikan sehingga dapat bermain bersama teman lainnya. Selain membuat ruangan sendiri, para pemain juga dapat memilih untuk bermain sendiri yang nantinya akan dimasukkan kedalam ruangan acak yang berisi pemain lainnya. Dalam permainan Stumble Guys, para pemain juga dapat mengganti tampilan karakter mulai dari pakaian, warna, emoji, animasi, dan jejak kaki karakter saat bermain.'
             },
             {
@@ -181,6 +190,7 @@ function createGamesTable() {
                 harga: 6500,
                 categoryId: 1,
                 popular: 1,
+                banner : '../assets/photos/bannerC/bannerPUBG.jpg',
                 deskripsi: 'PUBG Mobile menampilkan gameplay yang mirip dengan PlayerUnknown Battlegrounds asli. Pemain terjun payung ke pulau terpencil dan berjuang untuk tetap menjadi pemain terakhir yang bertahan, berkompetisi sendiri atau dalam tim yang terdiri dari dua atau empat orang, tergantung pada mode permainan yang dipilih sebelum pertandingan. Setiap pertandingan berlangsung sekitar 30 menit. Diperlukan waktu tepat 32 menit 50 detik agar zona tersebut tertutup sepenuhnya. Setelah itu, sekitar 11 detik lagi hingga Anda mati di dalam zona tersebut, jadi potensi maksimal sekitar 33 menit 10 detik jika Anda mencoba menyembuhkan diri sendiri. Permainan dimulai dengan para peserta terbang dengan pesawat melewati salah satu dari banyak kemungkinan peta, juga dipilih sebelum pertandingan. Saat mereka melintasi peta, pemain memilih tempat untuk terjun payung. Ketika pesawat menyelesaikan penerbangannya, batas biru terbentuk di sekeliling pulau, menandai batas antara zona aman dan zona biru luar. Zona biru menyusut setiap beberapa menit, dan siapa pun yang tertinggal di zona tersebut akan terus kehilangan kesehatannya selama mereka tetap berada di sana, yang berpotensi menyebabkan kematian. Tingkat kehilangan kesehatan meningkat ketika zona aman menyusut.'
             },
             {
@@ -192,6 +202,7 @@ function createGamesTable() {
                 harga: 7900,
                 categoryId: 5,
                 popular: 0,
+                banner : '../assets/photos/bannerC/bannerHAYDAY.jpg',
                 deskripsi: 'Hay Day adalah game seluler populer yang dibuat oleh Supercell pada tahun 2012. Ini adalah simulator bertani tempat Anda dapat menanam tanaman dan pohon, beternak hewan, menjual produk, berkompetisi dalam derby, dan banyak lagi. Hay Day adalah game freemium sehingga semua fitur game ini terbuka untuk pemain yang memilih untuk tidak membeli pembelian dalam aplikasi.'
             },
             // {
@@ -211,6 +222,7 @@ function createGamesTable() {
                 harga: 4000,
                 categoryId: 2,
                 popular: 0,
+                banner : '../assets/photos/bannerC/bannerBRAWLSTARS.jpg',
                 deskripsi: 'Di Brawl Stars, pemain bertarung melawan pemain lain atau lawan AI dalam berbagai mode permainan. Pemain dapat memilih antara karakter yang disebut Brawlers yang telah mereka buka melalui Kotak, Brawl Pass, Trophy Road, atau dibeli melalui Toko untuk digunakan dalam pertempuran.[6] Pada bulan Desember 2022, Kotak telah dihapus, dan semua metode sebelumnya untuk mendapatkannya diganti dengan kredit dan kredit kroma, yang digunakan untuk membuka Jagoan, yang sekarang sebagian besar ditempatkan di "Starr Road". Brawl Stars memiliki beragam mode permainan yang dapat dipilih pemain, masing-masing memiliki tujuan berbeda. Pemain dapat mengundang teman untuk bermain bersama mereka hingga ukuran tim maksimum dalam mode permainan.'
             },
         ]
@@ -510,4 +522,55 @@ window.onload = function() {
     showUserLoginStatus();
 }
 
+
+function createPaymentTablee() {
+    let paymentCategory = JSON.parse(localStorage.getItem('paymentCategory'));
+
+    if (!paymentCategory) {
+        paymentCategory = [];
+    }
+
+    if (paymentCategory.length < 1) {
+        let paymentCategoryLists = [
+            {
+                id : 1, 
+                nama : 'Gopay' ,
+                logo : '../assets/photos/payment/gopay-1.jpg' ,
+            },
+            {
+                id : 2, 
+                nama : 'OVO' ,
+                logo : '../assets/photos/payment/ovo.jpeg' ,
+            },
+            {
+                id : 3, 
+                nama : 'QRIS' ,
+                logo : '../assets/photos/payment/qris copy.png' ,
+            },
+            {
+                id : 4, 
+                nama : 'Indomart' ,
+                logo : '../assets/photos/payment/indomaret.jpeg' ,
+            },
+            {
+                id : 5, 
+                nama : 'Alfamart' ,
+                logo : '../assets/photos/payment/logo-alfamart.jpg' ,
+            },
+            {
+                id : 6, 
+                nama : 'Transfer Bank' ,
+                logo : '../assets/photos/payment/logo-semua-bank-14.png' ,
+            },
+           
+        ]
+
+        for (const pc of paymentCategoryLists) {
+            paymentCategory.push(pc);
+        }
+        localStorage.setItem('paymentCategory', JSON.stringify(paymentCategory));
+    }
+
+    showPaymentCategory();
+}
 
