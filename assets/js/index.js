@@ -522,6 +522,7 @@ window.onload = function() {
     showUserLoginStatus();
 }
 
+
 function createPaymentTablee() {
     let paymentCategory = JSON.parse(localStorage.getItem('paymentCategory'));
 
@@ -572,3 +573,4 @@ function createPaymentTablee() {
 
     showPaymentCategory();
 }
+
