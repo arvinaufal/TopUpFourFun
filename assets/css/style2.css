@@ -33,9 +33,11 @@
 /* Navbar Start */
 .navbar .navbar-brand{
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 1000;
     font-size: 36px;
-    color: white;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    
 }
 .navbar.active{
     background-color: #5fa8d3 !important;
@@ -277,14 +279,14 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 40px;
-    color: #000000;
+    color: #ffffff;
 }
 .footer .email{
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
 }
 .footer .sosmed i{
-    color: #000000;
+    color: #ffffff;
     font-size: 40px;
 }
 .footer ul{
@@ -297,14 +299,14 @@
 .footer .column h3{
     font-weight: 700;
 font-size: 25px;
-color: #000000;
+color: #ffffff;
 margin-bottom: 30px;
 }
 .footer .column .maps{
     font-weight: 500;
 font-size: 20px;
 text-decoration: none;
-color: #000000;
+color: #ffffff;
 }
 
 .carousel-item{
