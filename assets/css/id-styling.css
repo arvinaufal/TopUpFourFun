@@ -8,20 +8,14 @@
     z-index: 2;
 }
 .nomor {
-    /* position: inherit; */
-    /* display: flex; */
     width: 50px;
     height: 50px;
     background-color: blue;
-    font-size: 30px;
+    font-size: 40px;
     color: white;
-    /* top: 20px;
-    left: 380px; */
     border-radius: 100%;
     text-align: center;
     font-weight: bold;
-    margin-left: 40px;
-    float: left;
     position: absolute;
     top: -20px;
     z-index: 2;
@@ -33,9 +27,6 @@
     width: 800px;
     height: 70px;
     background-color: blue;
-    /* position: inherit; */
-    /* display: flex;
-    top: 268px; */
     border-radius: 0 0 40px 40px;
     color: white;
     padding: 15px;
