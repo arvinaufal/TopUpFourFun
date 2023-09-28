@@ -35,6 +35,8 @@
     background-color: aliceblue;
     border-radius: 12px;
     border: 1px solid green;
+    position: relative;
+    z-index: 4;
 }
 .radio-pembayaran {
     margin: 30px 0 30px 30px;
@@ -51,7 +53,7 @@
     height: 25px;
     border-radius: 100%;
     cursor: pointer;
-    top: 94px;
+    top: 28px;
     left: 44px;
     border: 2px solid black;
     z-index: 4;
@@ -94,7 +96,7 @@
     height: 24px;
     background-color: blue;
     position: absolute;
-    top: 143px;
+    top: 74px;
     border-radius: 0 0 12px 12px;
     color: white;;
     font-size: 16px;
