@@ -41,17 +41,18 @@
     margin: 8px;
     float: left;
 }
-.search-control {
+.add-control {
     float: right;
     display: block;
     background-color: white;
     color: green;
     border: 2px solid green;
     border-radius: 24px;
-    padding: 6px 40px;
-    margin: 8px 20px 8px 0px ;
+    padding: 0 30px;
+    margin: 8px 80px 4px 0px ;
+    font-size: 24px;
 }
-.search-control:hover {
+.add-control:hover {
     background-color: green;
     color: white;
 }
@@ -59,4 +60,6 @@
     font-size: 32px;
     margin-left: 100px;
     margin-bottom: 30px;
+    font-family: sans-serif;
+    font-weight: normal;
 }
