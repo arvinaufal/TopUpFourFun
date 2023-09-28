@@ -118,7 +118,7 @@
     <!-- Home End -->
 
     <!-- About Start -->
-    <section class="about section-margin" id="about">
+    <section class="about section-margin" id="games">
       <div class="container mt-5">
         <div class="row justify-content-center">
           <div class="col-lg-6">
@@ -131,15 +131,19 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-1">
             <div class="btn-group dropdown">
-              <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+              <button type="button" style="width: 100px; height: 40px; border-radius: 20px;" class="btn btn-primary dropdown-toggle mt-2" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
                 Genre
               </button>
               <ul class="dropdown-menu dropdown-menu-end">
-                <li><button class="dropdown-item" type="button">MOBA</button></li>
-                <li><button class="dropdown-item" type="button">FPS</button></li>
-                <li><button class="dropdown-item" type="button">MMORPG</button></li>
+                <li><div class="dropdown-item" type="button" onclick="showGames(1)">Battle Royale</div></li>
+                <li><div class="dropdown-item" type="button" onclick="showGames(2)">Moba</div></li>
+                <li><div class="dropdown-item" type="button" onclick="showGames(3)">Multiplayer Online Sandbox</div></li>
+                <li><div class="dropdown-item" type="button" onclick="showGames(4)">Multiplayer Party Knockout Game</div></li>
+                <li><div class="dropdown-item" type="button" onclick="showGames(5)">Online Multiplayer Strategy Game</div></li>
+                <li><div class="dropdown-item" type="button" onclick="showGames(6)">Open World Game</div></li>
+            
               </ul>
             </div>
           </div>

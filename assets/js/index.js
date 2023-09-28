@@ -61,10 +61,10 @@ function createGamesTable() {
                 id : 0, 
                 nama : 'Genshin Impact' ,
                 logo : '../assets/photos/games/genshin.jpg' ,
-                genre : 'Open World',
+                genre : 'Open world game',
                 item : 'Diamonds',
                 harga: 3000,
-                categoryId: 1,
+                categoryId: 6,
                 popular: 1,
             },
             {
@@ -273,6 +273,52 @@ function showGames(category){
     }
 
 
+        //Game List
+        let contentGameLists = ""; // Inisialisasi variabel string untuk menyimpan konten
+        if (games.length < 1) {
+            contentGameLists = 'Game tidak ditemukan'
+        }
+        for (const game of games) {
+            const {id, nama, logo, genre, item, harga, categoryId, popular} = game;
+            let rupiah = formatRupiah(harga);
+          
+            contentGameLists += `
+                <div class="col-lg-3 mb-4">
+                    <a href="#" class="gamelists-link">
+                    
+                    <div class="card-arvi">
+                        <img src="${logo}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6 class="card-title" style="font-weight: bold; font-size: 24px;">${nama}</h6>
+                            <div class="d-flex">
+                                <span class="badge badge-pill discount-precentage">${genre}</span>
+                                <span class="badge badge-pill discount-price"></span>
+                            </div>
+                            <p class="mt-1 mb-0" style="font-size: 14px;">Start From:</p>
+                            <h5 class="mt-1" style="font-weight: bold;">${rupiah} <span style="font-size: 12px; color: #989898;">/${item}</span> </h5>
+                            <div class="d-flex align-items-center">
+                                <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
+                                <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
+                                <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
+                                <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
+                                <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
+                                <span style="color: #989898;">(972)</span>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                
+                </div>
+            `;
+        }
+        bungkusGameLists.innerHTML = contentGameLists; // Menetapkan konten baru ke elemen
+
+
+
+
+        if (!category) {
+            games = JSON.parse(localStorage.getItem('games'));
+        }
     //Game Populer
     for (const gmsP of games) {
         const {id, nama, logo, genre, item, harga, categoryId, popular} = gmsP;
@@ -282,6 +328,7 @@ function showGames(category){
         }
     }
     let gamePopular = ""; // Inisialisasi variabel string untuk menyimpan konten
+    
     for (const gmsP of popularGames) {
         const {id, nama, logo, genre, item, harga, categoryId, popular} = gmsP;
         let rupiah = formatRupiah(harga);
@@ -316,45 +363,7 @@ function showGames(category){
 
 
 
-    //Game List
-    let contentGameLists = ""; // Inisialisasi variabel string untuk menyimpan konten
-    if (games.length < 1) {
-        contentGameLists = 'Game tidak ditemukan'
-    }
-    for (const game of games) {
-        const {id, nama, logo, genre, item, harga, categoryId, popular} = game;
-        let rupiah = formatRupiah(harga);
-      
-        contentGameLists += `
-            <div class="col-lg-3 mb-4">
-                <a href="#" class="gamelists-link">
-                
-                <div class="card-arvi">
-                    <img src="${logo}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h6 class="card-title" style="font-weight: bold; font-size: 24px;">${nama}</h6>
-                        <div class="d-flex">
-                            <span class="badge badge-pill discount-precentage">${genre}</span>
-                            <span class="badge badge-pill discount-price"></span>
-                        </div>
-                        <p class="mt-1 mb-0" style="font-size: 14px;">Start From:</p>
-                        <h5 class="mt-1" style="font-weight: bold;">${rupiah} <span style="font-size: 12px; color: #989898;">/10 ${item}</span> </h5>
-                        <div class="d-flex align-items-center">
-                            <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
-                            <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
-                            <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
-                            <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
-                            <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
-                            <span style="color: #989898;">(972)</span>
-                        </div>
-                    </div>
-                </div>
-                </a>
-            
-            </div>
-        `;
-    }
-    bungkusGameLists.innerHTML = contentGameLists; // Menetapkan konten baru ke elemen
+
 }
 
 function showGamesCategory(){
@@ -368,7 +377,7 @@ function showGamesCategory(){
         const {id, nama, logo } = gc;
         content += `
                 <div class="col-lg-4 col-md-6 mt-4 mt-md-0 mb-4">
-                    <a href="#" class="game-category-link">
+                    <a href="#games" class="game-category-link" onclick="showGames(${id})">
                         <div class="card-service d-flex align-items-center">
                             <img src="${logo}" class="img-fluid img-section-gamelists" alt="" />
                             <div class="detail">
