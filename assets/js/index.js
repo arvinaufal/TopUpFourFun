@@ -509,3 +509,5 @@ window.onload = function() {
     createTestimonialsTable();
     showUserLoginStatus();
 }
+
+
