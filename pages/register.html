@@ -12,53 +12,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <link rel="icon" href="../assets/photos/logo.png" />
     <title>Form Register</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  
   </head>
   <body>
-    <div id="login-page" class="container">
-      <div class="login-container">
+    <div id="register-page" class="container">
+      <div class="register-container">
         <div class="logo-img">
         </div>
         <h2>Register</h2>
-        <form id="myForm" onsubmit="register(); return false;">
-          <!-- <div class="input-group">
-            <label for="nama-register">Nama:</label>
-            <input type="text" id="nama-register" name="nama-register" required />
-          </div>
-          <div class="input-group">
-            <label for="username-register">Username:</label>
-            <input type="text" id="username-register" name="username-register" required />
-          </div> -->
         
+        <form id="registerForm" onsubmit="register(); return false;">
           <div class="input-group">
-            <label for="email-register">Nama:</label>
-            <input type="text" id="email-register" name="email-register" required />
+            <label for="email-register">Email:</label>
+            <input type="email" id="email-register" name="email-register" required />
           </div>
           <div class="input-group">
             <label for="password-register">Password:</label>
             <input type="password" id="password-register" name="password-register" required />
-          </div>
+          </div>         
           <div class="input-group">
-            <label for="password-register-konfirmasi">Konfirmasi Password:</label>
-            <input type="password" id="password-register-konfirmasi" name="password-register-konfirmasi" required />
-          </div>
+            <label for="konfirmasi-password-register">Password:</label>
+            <input type="password" id="konfirmasi-password-register" name="konfirmasi-password-register" required />
+          </div>         
+    
+         
+          <a href="login.html" class="forgot-password">Sudah punya akun?</a>
           <div class="input-group">
-            <label for="password-register-konfirmasi">Konfirmasi Password:</label>
-            <input type="password" id="password-register-konfirmasi" name="password-register-konfirmasi" required />
-          </div>
-          <a href="#" class="forgot-password">Lupa Password?</a>
-          <div class="input-group">
-            <button type="submit">Login</button>
+            <button type="submit">Register</button>
           </div>
         </form>
-        <div class="google-login">
-          <a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmail.google.com&ec=GAlAFw&hl=en&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S-586960051%3A1695717102667901&theme=glif">
-            <img src="../assets/photos/logogoogle.png" alt="Login dengan Google" /> Masuk dengan Google
-          </a>
-        </div>
       </div>
     </div>
     <audio id="loginPageAudio" autoplay>
@@ -66,8 +52,8 @@
       <source src="../assets/audios/Percussion Full.wav" type="audio/wav">
     </audio>
     
-    <script src="../assets/auth.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="../assets/js/auth.js"></script> 
   </body>
 </html>
 <!-- login form end -->
