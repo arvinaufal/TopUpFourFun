@@ -1,12 +1,13 @@
 .box-id {
     width: 800px;
-    height: 300px;
+    height: 250px;
     background-color: #caf0f8;
     margin: 40px auto;
     border-radius: 40px;
 }
 .nomor {
-    position: absolute;
+    /* position: inherit; */
+    display: flex;
     width: 50px;
     height: 50px;
     background-color: blue;
@@ -17,6 +18,8 @@
     border-radius: 100%;
     text-align: center;
     font-weight: bold;
+    margin-left: 40px;
+    float: left;
 }
 .btn, .btn-success {
     margin-left: 30px;
@@ -25,7 +28,8 @@
     width: 800px;
     height: 70px;
     background-color: blue;
-    position: absolute;
+    /* position: inherit; */
+    display: flex;
     top: 268px;
     border-radius: 0 0 40px 40px;
     color: white;
@@ -33,6 +37,7 @@
     font-size: 12px;
     font-weight: bold;
     font-style: italic;
+    margin-top: 50px;
 }
 .form-control {
     display: block;
@@ -49,7 +54,7 @@
     border: 2px solid green;
     border-radius: 24px;
     padding: 0 30px;
-    margin: 8px 80px 4px 0px ;
+    margin: 8px 60px 4px 0px ;
     font-size: 24px;
 }
 .add-control:hover {

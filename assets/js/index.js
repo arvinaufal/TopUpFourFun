@@ -284,7 +284,7 @@ function showGames(category){
           
             contentGameLists += `
                 <div class="col-lg-3 mb-4">
-                    <a href="#" class="gamelists-link">
+                    <a href="cart.html" class="gamelists-link" onClick="toCart(${id})">
                     
                     <div class="card-arvi">
                         <img src="${logo}" class="card-img-top" alt="...">
@@ -334,6 +334,7 @@ function showGames(category){
         let rupiah = formatRupiah(harga);
         gamePopular += `
             <div class="swiper-slide position-relative card-holder">
+            <a href="cart.html" class="gamelists-link" onClick="toCart(${id})">
                 <div class="card-arvi">
                     <img src="${logo}" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -353,6 +354,7 @@ function showGames(category){
                         </div>
                     </div>
                 </div>
+                </a>
             </div>
         `;
     }
@@ -444,30 +446,45 @@ function showUserLoginStatus(){
     }
 }
 
-function cart(gameId, playerIdArray, payment) {
+function toCart(gameId) {
     // Mengambil data keranjang dari localStorage (jika ada)
     let cartData = JSON.parse(localStorage.getItem('cart'));
   
+  
     // Jika belum ada data keranjang, buat objek kosong
-    if (!cartData) {
       cartData = {};
-    }
-  
-    // Menyimpan data ke dalam objek keranjang
-    cartData.gameId = gameId;
-    cartData.playerId = playerIdArray;
-    cartData.payment = payment;
-  
-    // Menyimpan objek keranjang kembali ke localStorage
-    localStorage.setItem('cart', JSON.stringify(cartData));
-  }
+      // Menyimpan data ke dalam objek keranjang
 
-const gameId = 1;
-const playerIdArray = [1, 2, 3];
-const payment = 50000;
+      cartData.gameId = gameId;
+      cartData.playerId = [];
+      cartData.payment = null;
+      cartData.token = generateString(18);
 
-cart(gameId, playerIdArray, payment);
+      localStorage.setItem('cart', JSON.stringify(cartData));
 
+}
+
+function testess() {
+    console.log('ya');
+    let userId = document.getElementById('user_id');
+    Swal.fire({
+        title: 'Yakin?',
+        text: "Apakah Anda yakin ingin menambahkan user id " + userId.value + "?",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'Ok',
+        cancelButtonText: 'Tidak',
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        allowEnterKey: false,
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // localStorage.removeItem('loginUsers');
+            // window.location.href = '../pages/index.html';
+        }
+    });
+}
 
 
 
