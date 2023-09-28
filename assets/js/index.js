@@ -91,7 +91,7 @@ function createGamesTable() {
                 categoryId: 1,
                 popular: 0,
                 banner : '../assets/photos/bannerC/bannerFF.png',
-                deskripsi: 'Gameplay Free Fire adalah dimana semua pemain dikerahkan dengan pesawat dan wajib melakukan terjun bebas. Tiap pemain juga harus mencari senjata dan peralatan medis ketika dikirim untuk bertarung melawan pemain lain dan bertahan hidup. Di tengah permainan nanti akan ada pesawat yang lewat dan meluncurkan airdrop dalam bentuk kotak besar berisi rompi anti peluru, helm, senjata khusus seperti AWM, Groza[12], M79 dan M249[13] ataupun senapan mesin. Menemukan airdrop juga tidak sulit. Sebelum airdrop turun, akan terlihat sebuah tanda berbentuk airdrop dengan parasut yang akan muncul di minimap. Kotak ini akan memancarkan garis vertikal atau lurus dari langit dengan cahaya kuningnya. Untuk lebih memanjakan pemain, Free Fire memberi indikator untuk barang-barang dalam airdrop. Jika semuanya telah diambil, cahayanya akan hilang, dan sebaliknya cahayanya akan tetap menyala jika ada elemen yang belum diambil. Tetapi setelah beberapa waktu, cahaya tersebut juga akan hilang walaupun item di dalamnya masih ada, hanya ada seberkas cahaya kuning di tepi airdropnya. Pada waktu-waktu tertentu permainan, Zona Bahaya akan muncul, lingkaran zona bahaya akan berwarna merah jika dilihat dari peta. Di daerah-daerah tertentu dari zona bahaya akan terjadi ledakan.'
+                deskripsi: 'Gameplay Free Fire adalah dimana semua pemain dikerahkan dengan pesawat dan wajib melakukan terjun bebas. Tiap pemain juga harus mencari senjata dan peralatan medis ketika dikirim untuk bertarung melawan pemain lain dan bertahan hidup. Di tengah permainan nanti akan ada pesawat yang lewat dan meluncurkan airdrop dalam bentuk kotak besar berisi rompi anti peluru, helm, senjata khusus seperti AWM, Groza[12], M79 dan M249[13] ataupun senapan mesin. Menemukan airdrop juga tidak sulit. Sebelum airdrop turun, akan terlihat sebuah tanda berbentuk airdrop dengan parasut yang akan muncul di minimap. Kotak ini akan memancarkan garis vertikal atau lurus dari langit dengan cahaya kuningnya.'
             },
             {
                 id : 3,
@@ -179,7 +179,7 @@ function createGamesTable() {
                 categoryId: 4,
                 popular: 0,
                 banner : '../assets/photos/bannerC/bannerSTUMBLEGUYS.jpg',
-                deskripsi: 'Stumble Guys adalah suatu game online berbasis multiplayer royale yang dikeluarkan oleh pengembang Kitka Games. Dalam rating Play Store, Stumble Guys mendapatkan skor rating 4.2 dari para pengunduhnya. Game ini sendiri membutuhkan ruang memori kosong sebesar 103 Megabyte saat akan diinstal. Berdasarkan informasi yang ditampilkan di Play Store, Stumble Guys telah diunduh di lebih dari 10 juta kali.Stumble Guys merupakan permainan yang cukup seru jika ingin dimainkan bersama teman tongkrongan. Dalam fitur game Stumble Guys, para pemain dapat membuat ruangan yang memiliki kode untuk dibagikan sehingga dapat bermain bersama teman lainnya. Selain membuat ruangan sendiri, para pemain juga dapat memilih untuk bermain sendiri yang nantinya akan dimasukkan kedalam ruangan acak yang berisi pemain lainnya. Dalam permainan Stumble Guys, para pemain juga dapat mengganti tampilan karakter mulai dari pakaian, warna, emoji, animasi, dan jejak kaki karakter saat bermain.'
+                deskripsi: 'Stumble Guys adalah suatu game online berbasis multiplayer royale yang dikeluarkan oleh pengembang Kitka Games. Dalam rating Play Store, Stumble Guys mendapatkan skor rating 4.2 dari para pengunduhnya. Game ini sendiri membutuhkan ruang memori kosong sebesar 103 Megabyte saat akan diinstal. Berdasarkan informasi yang ditampilkan di Play Store, Stumble Guys telah diunduh di lebih dari 10 juta kali.Stumble Guys merupakan permainan yang cukup seru jika ingin dimainkan bersama teman tongkrongan. Dalam fitur game Stumble Guys, para pemain dapat membuat ruangan yang memiliki kode untuk dibagikan sehingga dapat bermain bersama teman lainnya.'
             },
             {
                 id : 9,
@@ -191,7 +191,7 @@ function createGamesTable() {
                 categoryId: 1,
                 popular: 1,
                 banner : '../assets/photos/bannerC/bannerPUBG.jpg',
-                deskripsi: 'PUBG Mobile menampilkan gameplay yang mirip dengan PlayerUnknown Battlegrounds asli. Pemain terjun payung ke pulau terpencil dan berjuang untuk tetap menjadi pemain terakhir yang bertahan, berkompetisi sendiri atau dalam tim yang terdiri dari dua atau empat orang, tergantung pada mode permainan yang dipilih sebelum pertandingan. Setiap pertandingan berlangsung sekitar 30 menit. Diperlukan waktu tepat 32 menit 50 detik agar zona tersebut tertutup sepenuhnya. Setelah itu, sekitar 11 detik lagi hingga Anda mati di dalam zona tersebut, jadi potensi maksimal sekitar 33 menit 10 detik jika Anda mencoba menyembuhkan diri sendiri. Permainan dimulai dengan para peserta terbang dengan pesawat melewati salah satu dari banyak kemungkinan peta, juga dipilih sebelum pertandingan. Saat mereka melintasi peta, pemain memilih tempat untuk terjun payung. Ketika pesawat menyelesaikan penerbangannya, batas biru terbentuk di sekeliling pulau, menandai batas antara zona aman dan zona biru luar. Zona biru menyusut setiap beberapa menit, dan siapa pun yang tertinggal di zona tersebut akan terus kehilangan kesehatannya selama mereka tetap berada di sana, yang berpotensi menyebabkan kematian. Tingkat kehilangan kesehatan meningkat ketika zona aman menyusut.'
+                deskripsi: 'PUBG Mobile menampilkan gameplay yang mirip dengan PlayerUnknown Battlegrounds asli. Pemain terjun payung ke pulau terpencil dan berjuang untuk tetap menjadi pemain terakhir yang bertahan, berkompetisi sendiri atau dalam tim yang terdiri dari dua atau empat orang, tergantung pada mode permainan yang dipilih sebelum pertandingan. Setiap pertandingan berlangsung sekitar 30 menit. Diperlukan waktu tepat 32 menit 50 detik agar zona tersebut tertutup sepenuhnya. Setelah itu, sekitar 11 detik lagi hingga Anda mati di dalam zona tersebut, jadi potensi maksimal sekitar 33 menit 10 detik jika Anda mencoba menyembuhkan diri sendiri.'
             },
             {
                 id : 10,
@@ -276,12 +276,12 @@ function createTestimonialsTable() {
     showTestimonials();
 }
 
-function showGames(category){
-  
+function showGames(category) {
     let bungkusPopular = document.getElementById('section-games-promo');
     let bungkusGameLists = document.getElementById('gamelists');
     let games = JSON.parse(localStorage.getItem('games'));
     let popularGames = [];
+    let gamesToDisplay = [...games]; // Duplikat data games untuk ditampilkan
 
     let keyword = document.getElementById('searchGameInput').value;
 
@@ -290,33 +290,75 @@ function showGames(category){
             categoryId: category,
             keyword: keyword,
         }
-    
-        games = filterBy(games, params);
 
-       
+        gamesToDisplay = filterBy(gamesToDisplay, params);
     }
 
+    // Tampilkan Game List
+    let contentGameLists = "";
 
-        //Game List
-        let contentGameLists = ""; // Inisialisasi variabel string untuk menyimpan konten
-        if (games.length < 1) {
-            contentGameLists = 'Game tidak ditemukan'
-        }
-        for (const game of games) {
+    if (gamesToDisplay.length < 1) {
+        contentGameLists = 'Game tidak ditemukan'
+    } else {
+        for (const game of gamesToDisplay) {
             const {id, nama, logo, genre, item, harga, categoryId, popular} = game;
             let rupiah = formatRupiah(harga);
-          
+
             contentGameLists += `
                 <div class="col-lg-3 mb-4">
                     <a href="cart.html" class="gamelists-link" onClick="toCart(${id})">
-                    
+                        <div class="card-arvi">
+                            <img src="${logo}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h6 class="card-title" style="font-weight: bold; font-size: 24px;">${nama}</h6>
+                                <div class="d-flex">
+                                    <span class="badge badge-pill discount-precentage">${genre}</span>
+                                    <span class="badge badge-pill discount-price"></span>
+                                </div>
+                                <p class="mt-1 mb-0" style="font-size: 14px;">Start From:</p>
+                                <h5 class="mt-1" style="font-weight: bold;">${rupiah} <span style="font-size: 12px; color: #989898;">/${item}</span> </h5>
+                                <div class="d-flex align-items-center">
+                                    <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
+                                    <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
+                                    <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
+                                    <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
+                                    <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
+                                    <span style="color: #989898;">(972)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            `;
+        }
+    }
+
+    bungkusGameLists.innerHTML = contentGameLists;
+
+    // Tampilkan Game Populer
+    for (const gmsP of games) {
+        const {id, nama, logo, genre, item, harga, categoryId, popular} = gmsP;
+
+        if (popular === 1) {
+            popularGames.push(gmsP);
+        }
+    }
+
+    let gamePopular = "";
+
+    for (const gmsP of popularGames) {
+        const {id, nama, logo, genre, item, harga, categoryId, popular} = gmsP;
+        let rupiah = formatRupiah(harga);
+
+        gamePopular += `
+            <div class="swiper-slide position-relative card-holder">
+                <a href="cart.html" class="gamelists-link" onClick="toCart(${id})">
                     <div class="card-arvi">
                         <img src="${logo}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h6 class="card-title" style="font-weight: bold; font-size: 24px;">${nama}</h6>
+                            <h6 class="card-title">${nama}</h6>
                             <div class="d-flex">
                                 <span class="badge badge-pill discount-precentage">${genre}</span>
-                                <span class="badge badge-pill discount-price"></span>
                             </div>
                             <p class="mt-1 mb-0" style="font-size: 14px;">Start From:</p>
                             <h5 class="mt-1" style="font-weight: bold;">${rupiah} <span style="font-size: 12px; color: #989898;">/${item}</span> </h5>
@@ -330,67 +372,15 @@ function showGames(category){
                             </div>
                         </div>
                     </div>
-                    </a>
-                
-                </div>
-            `;
-        }
-        bungkusGameLists.innerHTML = contentGameLists; // Menetapkan konten baru ke elemen
-
-
-
-
-        if (!category) {
-            games = JSON.parse(localStorage.getItem('games'));
-        }
-    //Game Populer
-    for (const gmsP of games) {
-        const {id, nama, logo, genre, item, harga, categoryId, popular} = gmsP;
-      
-        if (popular === 1) {
-            popularGames.push(gmsP);
-        }
-    }
-    let gamePopular = ""; // Inisialisasi variabel string untuk menyimpan konten
-    
-    for (const gmsP of popularGames) {
-        const {id, nama, logo, genre, item, harga, categoryId, popular} = gmsP;
-        let rupiah = formatRupiah(harga);
-        gamePopular += `
-            <div class="swiper-slide position-relative card-holder">
-            <a href="cart.html" class="gamelists-link" onClick="toCart(${id})">
-                <div class="card-arvi">
-                    <img src="${logo}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h6 class="card-title">${nama}</h6>
-                        <div class="d-flex">
-                            <span class="badge badge-pill discount-precentage">${genre}</span>
-                        </div>
-                        <p class="mt-1 mb-0" style="font-size: 14px;">Start From:</p>
-                        <h5 class="mt-1" style="font-weight: bold;">${rupiah} <span style="font-size: 12px; color: #989898;">/${item}</span> </h5>
-                        <div class="d-flex align-items-center">
-                            <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
-                            <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
-                            <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
-                            <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
-                            <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
-                            <span style="color: #989898;">(972)</span>
-                        </div>
-                    </div>
-                </div>
                 </a>
             </div>
         `;
     }
-    bungkusPopular.innerHTML = gamePopular; // Menetapkan konten baru ke elemen
-    
 
-  
-
-
-
-
+    bungkusPopular.innerHTML = gamePopular;
 }
+
+
 
 function showGamesCategory(){
     let bungkus = document.getElementById('section-gamecategory-lists');
