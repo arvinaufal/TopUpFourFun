@@ -5,6 +5,7 @@
     margin: 40px auto;
     border-radius: 40px;
     position: relative;
+    z-index: 4;
 }
 .nomor {
     position: absolute;
@@ -18,6 +19,7 @@
     border-radius: 100%;
     text-align: center;
     font-weight: bold;
+    z-index: 4;
 }
 .box-menu-pembayaran h1 {
     font-size: 32px;
@@ -40,6 +42,7 @@
     width: 25px;
     height: 25px;
     position: absolute;
+    z-index: 4;
 }
 .radio-label {
     background-color: white;
@@ -51,6 +54,7 @@
     top: 94px;
     left: 44px;
     border: 2px solid black;
+    z-index: 4;
 
 }
 .radio-label:hover {
@@ -63,7 +67,8 @@
     width: 25px;
     height: 25px;
     background-color: blue;
-    display: none; 
+    display: none;
+    z-index: 4; 
 }
 .radio-pembayaran:checked + .radio-label::before {
     display: block;
@@ -74,6 +79,7 @@
     margin: 0 30px;
     position: absolute;
     left: 70px;
+    z-index: 4;
 }
 .jumlah-harga {
     font-size: 18px;
@@ -81,6 +87,7 @@
     padding: 30px 40px;
     position: absolute;
     right: 10px;
+    z-index: 4;
 }
 .bawah-box-pembayaran {
     width: 770px;
@@ -92,4 +99,5 @@
     color: white;;
     font-size: 16px;
     text-align: center;
+    z-index: 4;
 }
