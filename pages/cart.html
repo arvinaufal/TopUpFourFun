@@ -29,6 +29,8 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../assets/css/style2.css" />
     <link rel="stylesheet" href="../assets/css/id-styling.css" />
+    <link rel="stylesheet" href="../assets/css/menu-pembayaran-styling.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="/assets/js/cart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
@@ -99,6 +101,25 @@
        
         <div class="isi-box-id">Untuk mengetahui User ID Anda, silakan klik menu profile dibagian kiri atas pada menu utama game. User ID akan terlihat dibagian bawah Nama Karakter Game Anda. Silakan masukkan User ID Anda untuk menyelesaikan transaksi. Contoh : 12345678(1234).</div>
       </div>
+    </section>
+    <section>
+      <div class="box-menu-pembayaran">
+        <div class="nomor">3</div>
+        <h1>Pilih Pembayaran</h1>
+        <div class="box-isi-pembayaran">
+            <label class="radio-label">
+                <input type="radio" class="radio-pembayaran" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <div class="logo"><img src="/photo/gopay.png"></div>
+            <div class="jumlah-harga">Rp. 100.000</div>
+            <div class="bawah-box-pembayaran">Bayar dengan GoPay</div>
+        </div>
+    </div>
+    </section>
+
+    <section>
+      <div class="btn btn-primary" onclick="generateInvoice()">generate invoice</div>
     </section>
 
   

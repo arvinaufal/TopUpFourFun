@@ -478,27 +478,27 @@ function toCart(gameId) {
 
 }
 
-function testess() {
-    console.log('ya');
-    let userId = document.getElementById('user_id');
-    Swal.fire({
-        title: 'Yakin?',
-        text: "Apakah Anda yakin ingin menambahkan user id " + userId.value + "?",
-        icon: 'question',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        confirmButtonText: 'Ok',
-        cancelButtonText: 'Tidak',
-        allowOutsideClick: false,
-        allowEscapeKey: false,
-        allowEnterKey: false,
-    }).then((result) => {
-        if (result.isConfirmed) {
-            // localStorage.removeItem('loginUsers');
-            // window.location.href = '../pages/index.html';
-        }
-    });
-}
+// function testess() {
+//     console.log('ya');
+//     let userId = document.getElementById('user_id');
+//     Swal.fire({
+//         title: 'Yakin?',
+//         text: "Apakah Anda yakin ingin menambahkan user id " + userId.value + "?",
+//         icon: 'question',
+//         showCancelButton: true,
+//         confirmButtonColor: '#3085d6',
+//         confirmButtonText: 'Ok',
+//         cancelButtonText: 'Tidak',
+//         allowOutsideClick: false,
+//         allowEscapeKey: false,
+//         allowEnterKey: false,
+//     }).then((result) => {
+//         if (result.isConfirmed) {
+//             // localStorage.removeItem('loginUsers');
+//             // window.location.href = '../pages/index.html';
+//         }
+//     });
+// }
 
 
 
@@ -513,54 +513,5 @@ window.onload = function() {
 }
 
 
-function createPaymentTablee() {
-    let paymentCategory = JSON.parse(localStorage.getItem('paymentCategory'));
 
-    if (!paymentCategory) {
-        paymentCategory = [];
-    }
-
-    if (paymentCategory.length < 1) {
-        let paymentCategoryLists = [
-            {
-                id : 1, 
-                nama : 'Gopay' ,
-                logo : '../assets/photos/payment/gopay-1.jpg' ,
-            },
-            {
-                id : 2, 
-                nama : 'OVO' ,
-                logo : '../assets/photos/payment/ovo.jpeg' ,
-            },
-            {
-                id : 3, 
-                nama : 'QRIS' ,
-                logo : '../assets/photos/payment/qris copy.png' ,
-            },
-            {
-                id : 4, 
-                nama : 'Indomart' ,
-                logo : '../assets/photos/payment/indomaret.jpeg' ,
-            },
-            {
-                id : 5, 
-                nama : 'Alfamart' ,
-                logo : '../assets/photos/payment/logo-alfamart.jpg' ,
-            },
-            {
-                id : 6, 
-                nama : 'Transfer Bank' ,
-                logo : '../assets/photos/payment/logo-semua-bank-14.png' ,
-            },
-           
-        ]
-
-        for (const pc of paymentCategoryLists) {
-            paymentCategory.push(pc);
-        }
-        localStorage.setItem('paymentCategory', JSON.stringify(paymentCategory));
-    }
-
-    showPaymentCategory();
-}
 
