@@ -2,17 +2,29 @@
 
 .container-raffi {
     height: auto;
-    background-color: rgb(47, 47, 242);
+    background-color: #00b4d8;
     margin: 0;
+}
+ul {
+    margin: auto;  
+}
+li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
 }
 .navbar-brand-raffi h1{
     font-size: 30px;
     float: right;
+    color: black;
+    padding-left: 20px;
 }
 .login-raffi {
-    background-color: blue;
+    background-color: #0077b6;
     color: white;
     width: 200px;
+    border-radius: 8px;
+    margin: 1px 10px;
 }
 section h2 {
     text-align: center;
@@ -23,11 +35,13 @@ section h2 {
 }
 .menu-slider-raffi {
     width: 900px;
-    height: 300px;
+    height: auto;
     background-color: lightcyan;
     margin: 0 auto;
+    position: relative;
+
 }
-.menu-popula-raffi {
+.menu-popular-raffi {
     width: 900px;
     height: 300px;
     background-color: lightcyan;
@@ -44,11 +58,25 @@ section h2 {
     height: 300px;
     background-color: lightcyan;
     margin: 0 auto;
+    margin-bottom: 16px;
 }
 footer {
     width: auto;
-    height: 300px;
-    background-color: white;
+    height: 200px;
+    background-color: #caf0f8;
+    text-align: center;
+}
+footer h2 {
+    padding-top: 16px;
+}
+footer p {
+    font-size: 25px;
+    font-weight: bold;
+}
+.logo-footer-raffi {
+    width: 25px;
+    height: 25px;
+    margin: 8px;
 }
 /* ini css login form */
 body {
@@ -130,3 +158,25 @@ body {
   }
   
 /* css login form end  */
+
+.swal2-popup {
+  font-family: 'Arial', sans-serif; /* Ganti 'Arial' dengan font pilihan Anda */
+}
+
+#login-page {
+  background-image: url(../assets/photos/bg-login2.jpg);
+  background-size: cover;
+}
+
+
+.logo-img {
+
+  display: flex;
+  margin-left: 30%;
+  margin-bottom: 0px;
+  width: 50%;
+  height: 100px;
+  background-image: url(../assets/photos/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
