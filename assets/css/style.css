@@ -13,6 +13,18 @@ li {
     display: inline-block;
     padding: 10px;
 }
+
+.centered-list {
+  list-style: none;
+  padding: 0;
+  text-align: center; /* Rata tengahkan teks */
+}
+
+.centered-list li {
+  margin: 10px 0; /* Atur margin atas dan bawah sesuai keinginan Anda */
+  display: inline-block;
+}
+
 .navbar-brand-raffi h1{
     font-size: 30px;
     float: right;
