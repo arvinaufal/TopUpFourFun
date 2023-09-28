@@ -24,6 +24,111 @@
     // Export fungsi testess jika perlu
 //     window.testess = testess;
 // });
+function createPaymentTable() {
+    let paymentCategories = JSON.parse(localStorage.getItem('paymentCategories'));
+
+    if (!paymentCategories) {
+        paymentCategories = [];
+    }
+
+    if (paymentCategories.length < 1) {
+        let paymentCategoryLists = [
+            {
+                id : 1, 
+                nama : 'Gopay' ,
+                logo : '../assets/photos/payment/gopay-1.jpg' ,
+            },
+            {
+                id : 2, 
+                nama : 'OVO' ,
+                logo : '../assets/photos/payment/ovo.jpeg' ,
+            },
+            {
+                id : 3, 
+                nama : 'QRIS' ,
+                logo : '../assets/photos/payment/qris copy.png' ,
+            },
+            {
+                id : 4, 
+                nama : 'Indomart' ,
+                logo : '../assets/photos/payment/indomaret.jpeg' ,
+            },
+            {
+                id : 5, 
+                nama : 'Alfamart' ,
+                logo : '../assets/photos/payment/logo-alfamart.jpg' ,
+            },
+            {
+                id : 6, 
+                nama : 'Transfer Bank' ,
+                logo : '../assets/photos/payment/logo-semua-bank-14.png' ,
+            },
+           
+        ]
+
+        for (const pc of paymentCategoryLists) {
+            paymentCategories.push(pc);
+        }
+        localStorage.setItem('paymentCategories', JSON.stringify(paymentCategories));
+    }
+
+    showPaymentCategory();
+}
+
+function showPaymentCategory(){
+    let bungkus = document.getElementById('section-payment');
+    let paymentCategories = JSON.parse(localStorage.getItem('paymentCategories'));
+
+    let content = ""; // Inisialisasi variabel string untuk menyimpan konten
+   
+    //
+    for (const pC of paymentCategories) {
+        const {id, nama, logo } = pC;
+        content += `
+                <div class="swiper-slide card text-center py-2" style="border-radius: 20px;">
+                        
+                    <p class="name mb-0 mt-2 fw-bold">${nama}</p>
+                    <p class="address">${status}</p>
+                    <div class="card-body px-5 py-4 position-relative mx-auto">
+                    <i
+                        class="bx bxs-quote-left position-absolute top-0 start-0"
+                    ></i>
+                    <i
+                        class="bx bxs-quote-right position-absolute bottom-0 end-0"
+                    ></i>
+                    <p class="testi-text">
+                        ${testimoni}
+                    </p>
+                    </div>
+                </div>
+        `;
+    }
+
+    bungkus.innerHTML = content; // Menetapkan konten baru ke elemen
+}
+
+
+function cekCart(){
+    let cart = JSON.parse(localStorage.getItem('cart'));
+
+    if (!cart) {
+        Swal.fire({
+            title: 'Gagal!',
+            text: "Silakan memilih game terlebih dahulu!",
+            icon: 'error',
+            showCancelButton: false,
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Ok',
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            allowEnterKey: false,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = '../pages/index.html';
+            }
+        });
+    }
+}
 function getBannerDetailGame(){
     let cart = JSON.parse(localStorage.getItem('cart'));
     let gameId = cart.gameId;
@@ -426,8 +531,15 @@ function showUserLoginStatus(){
     }
 
 
+    function generateInvoice() {
+        console.log('sdhcdsj')
+    }
+
+
 window.onload = function() {
     // showUserLoginStatus();
+    cekCart();
+    createPaymentTable();
     getToken();
     showPlayerId();
     getBannerDetailGame();
