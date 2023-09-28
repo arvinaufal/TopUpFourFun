@@ -97,14 +97,14 @@ function showPaymentCategory(){
                         class="bx bxs-quote-right position-absolute bottom-0 end-0"
                     ></i>
                     <p class="testi-text">
-                        ${testimoni}
+              
                     </p>
                     </div>
                 </div>
         `;
     }
 
-    bungkus.innerHTML = content; // Menetapkan konten baru ke elemen
+    // bungkus.innerHTML = content; // Menetapkan konten baru ke elemen
 }
 
 
@@ -297,7 +297,7 @@ function handleUpdate(username, usernameOld, jmlDiamond, item) {
     
         localStorage.setItem('cart', JSON.stringify(cart));
         showPlayerId();
-
+        getDetailPembayaran();
 
         Swal.fire({
             title: 'Berhasil!',
@@ -340,7 +340,7 @@ function handleDelete(playerId) {
 
         // Tampilkan ulang daftar player ID
         showPlayerId();
-
+        getDetailPembayaran();
         // Tampilkan pesan sukses
         Swal.fire({
             title: 'Berhasil!',
@@ -521,6 +521,7 @@ function showUserLoginStatus(){
 
                         document.getElementById('user_id').value = null;
                         showPlayerId();
+                        getDetailPembayaran();
                     }
 
          
@@ -531,9 +532,161 @@ function showUserLoginStatus(){
     }
 
 
-    function generateInvoice() {
-        console.log('sdhcdsj')
+    function getDetailPembayaran(){
+        let bungkus = document.getElementById('detail-pembayaran');
+        let cart = JSON.parse(localStorage.getItem('cart'));
+        let games = JSON.parse(localStorage.getItem('games'));
+        let gameId = cart.gameId;
+        let payment = cart.payment;
+        let totalBayar = 0;
+        let hargaGame = 0;
+        let totalDms = 0;
+        let item = '';
+        for (const i of games) {
+    
+            if (i.id === gameId) {
+                hargaGame = i.harga
+                item = i.item
+                break;
+            }
+        }
+
+        let playerIds = cart.playerId;
+        if (playerIds.length > 0) {
+            
+            for (const p of cart.playerId) {
+                const {userId, jmlDm} = p;
+                totalBayar += jmlDm * hargaGame;
+                totalDms += jmlDm;
+            }
+        }
+
+        let harga = formatRupiah(totalBayar);
+        bungkus.innerHTML = 
+        `
+            <div class="nomor">3</div>
+                <h1>Masukkan Detail Anda</h1>
+                    <p>Silahkan masukkan email Anda untuk menerima bukti pembelian Anda</p>
+                        <input type="email" class="email-control" placeholder="Masukkan Alamat E-mail Anda" id="email-invoice">
+                            <div class="clear"></div>
+                        <div class="detail-akhir">${totalDms} ${item} • ${payment}</div>
+                    <div class="btn btn-primary buy-control" onclick="generateInvoice()">Beli Sekarang</div>
+            <div class="harga">${harga}</div>
+        `;
     }
+
+    function generateInvoice() {
+        let emailInv = document.getElementById('email-invoice').value;
+
+        if (!emailInv) {
+            Swal.fire({
+                title: 'Gagal!',
+                text: "Mohon masukkan email pengiriman invoice!",
+                icon: 'error',
+                showCancelButton: false,
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'Ok',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false,
+            });
+            return;
+        }
+        let cart = JSON.parse(localStorage.getItem('cart'));
+        let games = JSON.parse(localStorage.getItem('games'));
+        let gameId = cart.gameId;
+        let payment = cart.payment;
+        let totalBayar = 0;
+        let hargaGame = 0;
+        let totalDms = 0;
+        let item = '';
+        let playerIds = cart.playerId;
+        let totalUserId = playerIds.length;
+
+        for (const i of games) {
+    
+            if (i.id === gameId) {
+                hargaGame = i.harga
+                item = i.item
+                break;
+            }
+        }
+
+        for (const j of playerIds) {
+            const {userId, jmlDm} = j;
+
+            if (jmlDm < 1) {
+                Swal.fire({
+                    title: 'Gagal!',
+                    text: "User " + userId + " belum memasukkan jumlah " + item + "!",
+                    icon: 'error',
+                    showCancelButton: false,
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'Ok',
+                    allowOutsideClick: false,
+                    allowEscapeKey: false,
+                    allowEnterKey: false,
+                });
+                return;
+            }
+        }
+      
+
+        
+        if (playerIds.length > 0) {
+            
+            for (const p of cart.playerId) {
+                const {userId, jmlDm} = p;
+                totalBayar += jmlDm * hargaGame;
+                totalDms += jmlDm;
+            }
+        }
+
+        let harga = formatRupiah(totalBayar);
+
+        Swal.fire({
+            title: 'Invoice',
+            html: `
+                <div class="container" style>
+                    <p>Alamat email: </p>
+                    <p>${emailInv} </p>
+                    <br>
+                    <p>Bayar Dengan: </p>
+                    <p>${payment} </p>
+                    <br>
+                    <p>Jumlah User ID: </p>
+                    <p>${totalUserId} </p>
+                    <br>
+                    <p>Total Pembayaran: </p>
+                    <p>${harga} </p>
+                </div>
+            `,
+            showCancelButton: true,
+            showConfirmButton: true,
+            confirmButtonText: 'Bayar Sekarang',
+            cancelButtonText: 'Bayar Nanti',
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            focusConfirm: false,
+            customClass: {
+                container: 'swal2-modal-lg'
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Panggil fungsi untuk bayar sekarang
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
+                // Modal akan tertutup
+            }
+        });
+    }
+    
+    
+    function handlePayNow() {
+        // Lakukan apa yang diperlukan untuk memproses pembayaran sekarang
+        // Misalnya, Anda dapat mengambil data dari formulir menggunakan
+        // document.getElementById('elementId').value dan melanjutkan dengan proses pembayaran.
+    }
+    
 
 
 window.onload = function() {
@@ -543,4 +696,5 @@ window.onload = function() {
     getToken();
     showPlayerId();
     getBannerDetailGame();
+    getDetailPembayaran();
 }
