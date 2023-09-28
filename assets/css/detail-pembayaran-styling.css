@@ -5,6 +5,7 @@
     margin: 40px auto;
     border-radius: 40px;
     position: relative;
+    z-index: 3;
 }
 .nomor {
     position: absolute;
@@ -18,6 +19,7 @@
     border-radius: 100%;
     text-align: center;
     font-weight: bold;
+    z-index: 3;
 }
 .box-detail-pembayaran h1 {
     font-size: 32px;
