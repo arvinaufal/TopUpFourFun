@@ -217,6 +217,9 @@ function logout(){
     });
 }
 
+docment.getElementById('logoutButton').addEventListener('click',function(){
+    logout();
+});
 // Panggil fungsi ini saat halaman dimuat
 window.onload = function() {
     createAdminUser();
