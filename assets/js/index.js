@@ -435,6 +435,29 @@ function showUserLoginStatus(){
     }
 }
 
+function cart(gameId, playerIdArray, payment) {
+    // Mengambil data keranjang dari localStorage (jika ada)
+    let cartData = JSON.parse(localStorage.getItem('cart'));
+  
+    // Jika belum ada data keranjang, buat objek kosong
+    if (!cartData) {
+      cartData = {};
+    }
+  
+    // Menyimpan data ke dalam objek keranjang
+    cartData.gameId = gameId;
+    cartData.playerId = playerIdArray;
+    cartData.payment = payment;
+  
+    // Menyimpan objek keranjang kembali ke localStorage
+    localStorage.setItem('cart', JSON.stringify(cartData));
+  }
+
+const gameId = 1;
+const playerIdArray = [1, 2, 3];
+const payment = 50000;
+
+cart(gameId, playerIdArray, payment);
 
 
 
