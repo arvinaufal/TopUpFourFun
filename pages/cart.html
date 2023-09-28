@@ -29,6 +29,8 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../assets/css/style2.css" />
     <link rel="stylesheet" href="../assets/css/id-styling.css" />
+    <link rel="stylesheet" href="../assets/css/menu-pembayaran-styling.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="/assets/js/cart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
@@ -67,27 +69,12 @@
         <section class="banner-section">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-6 order-2 order-lg-1">
-                        <img src="../assets/photos/bannerC/bannerML.png" alt="TopUpFourFun Banner" class="img-fluid">
+                    <div class="col-lg-6 order-2 order-lg-1" style="margin-right: 40px;" id="banner-detail-img">
+                       
                     </div>
-                    <div class="col-lg-6 order-1 order-lg-2">
-                        <div class="product-details" style="color: white;">
-                            <h2><b>Mobile Legends</b></h2>
-                            <p class="text-justify">
-                                TopUpFourFun telah bekerja sama dengan Moonton untuk menawarkan top up Mobile Legends dengan mudah, aman, dan nyaman.
-                            </p>
-                            <p class="text-justify">
-                                Top up ML Diamond, Twilight Pass, dan Weekly Pass hanya dalam hitungan detik! Cukup masukkan User ID dan Zone ID MLBB Anda, pilih jumlah Diamond yang Anda inginkan, selesaikan pembayaran, dan Diamond akan secara langsung ditambahkan ke akun Mobile Legends Anda.
-                            </p>
-                            <p class="text-justify">
-                                Bayarlah menggunakan Codacash, GoPay, ShopeePay, Dana, OVO, LinkAja, Telkomsel, Indosat, Tri, XL, Bank Transfer, QRIS, Indomaret, Alfamart, Kredivo, Kartu Kredit, dan Doku Wallet.
-                            </p>
-                            <p class="text-justify">
-                                Harga sudah termasuk PPN. Informasi tambahan, untuk transaksi menggunakan Telkomsel akan dikenakan biaya tambahan pajak.
-                            </p>
-                            <p class="text-justify warning">
-                                PERINGATAN: Harga sudah termasuk PPN. Informasi tambahan, untuk transaksi menggunakan Telkomsel akan dikenakan biaya tambahan pajak.
-                            </p>
+                    <div class="col-lg-5 order-1 order-lg-2">
+                        <div class="product-details" id="game-detail-desc" style="color: white;">
+                           
                         </div>
                     </div>
                 </div>
@@ -114,6 +101,25 @@
        
         <div class="isi-box-id">Untuk mengetahui User ID Anda, silakan klik menu profile dibagian kiri atas pada menu utama game. User ID akan terlihat dibagian bawah Nama Karakter Game Anda. Silakan masukkan User ID Anda untuk menyelesaikan transaksi. Contoh : 12345678(1234).</div>
       </div>
+    </section>
+    <section>
+      <div class="box-menu-pembayaran">
+        <div class="nomor">3</div>
+        <h1>Pilih Pembayaran</h1>
+        <div class="box-isi-pembayaran">
+            <label class="radio-label">
+                <input type="radio" class="radio-pembayaran" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <div class="logo"><img src="/photo/gopay.png"></div>
+            <div class="jumlah-harga">Rp. 100.000</div>
+            <div class="bawah-box-pembayaran">Bayar dengan GoPay</div>
+        </div>
+    </div>
+    </section>
+
+    <section>
+      <div class="btn btn-primary" onclick="generateInvoice()">generate invoice</div>
     </section>
 
   
