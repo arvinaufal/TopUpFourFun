@@ -73,3 +73,9 @@
     font-family: sans-serif;
     font-weight: normal;
 }
+.clear {
+    clear: both;
+}
+#listPlayer {
+    margin: 6px 0;
+}
