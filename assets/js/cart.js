@@ -113,6 +113,9 @@ function showUserLoginStatus(){
     function tambahPlayerId() {
     
         let userId = document.getElementById('user_id').value;
+        let countUserId = (userId + "");
+        countUserId = countUserId.length;
+        
     
         if (!userId) {
             Swal.fire({
@@ -126,9 +129,34 @@ function showUserLoginStatus(){
                 allowEscapeKey: false,
                 allowEnterKey: false,
             });
-        }else{
+        }else if(countUserId < 9){
+            Swal.fire({
+                title: 'Gagal!',
+                text: "User ID minimal 9 digit!",
+                icon: 'error',
+                showCancelButton: false,
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'Ok',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false,
+            });
+            
+        }else if(countUserId > 10){
 
-           
+            Swal.fire({
+                title: 'Gagal!',
+                text: "User ID maksimal 10 digit!",
+                icon: 'error',
+                showCancelButton: false,
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'Ok',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false,
+            });
+
+        }else{
 
             Swal.fire({
                 title: 'Yakin?',
