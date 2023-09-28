@@ -50,7 +50,7 @@
           <div class="navbar-nav m-auto">
             <a class="nav-link" href="#" style="font-weight: 400;">Beranda</a>
             <a class="nav-link" href="#kategori" style="font-weight: 400;">Kategori</a>
-            <a class="nav-link" href="#promo" style="font-weight: 400;">Promo</a>
+            <a class="nav-link" href="#populer" style="font-weight: 400;">Populer</a>
             <!-- <a class="nav-link" href="#">Products</a> -->
             <a class="nav-link" href="#testimoni" style="font-weight: 400;">Testimoni</a>
             <!-- <a class="nav-link" href="#">Contact</a> -->
@@ -115,37 +115,59 @@
         <div class="row justify-content-center">
           <div class="col-lg-6">
             <div class="input-group border rounded-pill p-2">
-              <input type="text" class="form-control border-0" placeholder="Cari game..." style="border-top-left-radius: 20px; border-bottom-left-radius: 20px; border-right: none; border-width: 2px;">
+              <input type="text" id="searchGameInput" class="form-control border-0" placeholder="Cari game..." style="border-top-left-radius: 20px; border-bottom-left-radius: 20px; border-right: none; border-width: 2px;">
               <div class="input-group-append">
-                <button class="btn btn-primary" style="border-radius: 20px; width: 100px; border-width: 2px;" type="button">
+                <div class="btn btn-primary" style="border-radius: 20px; width: 100px; border-width: 2px;" onclick="showGames(null)">
                   Cari
-                </button>
+                </div>
               </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="btn-group dropdown">
+              <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                Genre
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><button class="dropdown-item" type="button">MOBA</button></li>
+                <li><button class="dropdown-item" type="button">FPS</button></li>
+                <li><button class="dropdown-item" type="button">MMORPG</button></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
       
       <div class="container">
-        <!-- <div class="row align-items-center">
-          <div class="col-lg-5 mb-5 mb-lg-0">
-            <div class="image-box m-auto m-lg-0">
+        <div class="row justify-content-center" style="margin-top: 80px;"  id="gamelists">
+          <!-- <div class="col-lg-3 mb-4">
+            <a href="#" class="gamelists-link">
               
-            </div>
-          </div>
-          <div class="col-lg-6 offset-lg-1 mt-5 mt-lg-0">
-            <p class="label">OUR STORY</p>
-            <h1 class="heading-section">Know More About Our Shop</h1>
-            <p class="text text-heading">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam earum deserunt ipsam aperiam eaque iure delectus voluptate. Perferendis incidunt veniam natus labore aliquam pariatur, unde dolorum. Quos accusamus aperiam molestias dolores debitis optio et provident. Mollitia sequi accusamus eaque sit impedit nisi voluptatum, dolor voluptas, hic architecto excepturi maiores delectus!
-            </p>
-            <p class="text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugit aperiam delectus odio veniam molestias voluptate dolores vitae quidem ducimus?
-            </p>
-
-            <a href="#" class="btn btn-about px-4 py-2 py-sm-3">Contact Us</a>
-          </div>
-        </div> -->
+              <div class="card-arvi">
+                  <img src="../assets/photos/games/genshin.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h6 class="card-title" style="font-weight: bold; font-size: 24px;">Genshin Impact</h6>
+                      <div class="d-flex">
+                          <span class="badge badge-pill discount-precentage">Open World</span>
+                          <span class="badge badge-pill discount-price"></span>
+                      </div>
+                      <p class="mt-1 mb-0" style="font-size: 14px;">Start From:</p>
+                      <h5 class="mt-1" style="font-weight: bold;">Rp 4.000 <span style="font-size: 12px; color: #989898;">/10 diamonds</span> </h5>
+                      <div class="d-flex align-items-center">
+                          <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
+                          <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
+                          <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
+                          <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
+                          <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
+                          <span style="color: #989898;">(972)</span>
+                      </div>
+                  </div>
+              </div>
+            </a>
+         
+          </div> -->
+          
+        </div>
       </div>
     </section>
     <!-- About End -->
@@ -178,11 +200,11 @@
     <!-- Service End -->
 
     <!-- Product Start -->
-    <section class="product section-margin" id="promo">
+    <section class="product section-margin" id="populer">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-            <h1 class="heading-section" style="color: #053a77;">GAMES PROMO</h1>
+            <h1 class="heading-section" style="color: #053a77;">GAMES POPULER</h1>
           </div>
           <div class="col-lg-6 text-end toggle-slider mt-4 mt-md-0">
             <i class="bx bxs-chevron-left-circle me-2"></i>
@@ -415,13 +437,15 @@
     <script src="/assets/js/index.js"></script>
     <script src="/assets/js/script2.js"></script>
     <script src="/assets/js/auth.js"></script>
-    
-    <script>
-      document.getElementById('searchButton').addEventListener('click', function() {
-        let keyword = document.getElementById('searchInput').value;
-        showGames(null, keyword);
-      });
-    </script>
+
+     <!-- <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('searchButton').addEventListener('click', function() {
+                let keyword = document.getElementById('searchInput').value;
+                showGames(null, keyword);
+            });
+        });
+    </script> -->
 </html>
 
 

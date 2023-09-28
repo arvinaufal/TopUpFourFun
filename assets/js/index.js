@@ -65,6 +65,7 @@ function createGamesTable() {
                 item : 'Diamonds',
                 harga: 3000,
                 categoryId: 1,
+                popular: 1,
             },
             {
                 id : 1, 
@@ -74,6 +75,7 @@ function createGamesTable() {
                 item : 'Diamonds',
                 harga: 10000,
                 categoryId: 5,
+                popular: 0,
             },
             {
                 id : 2,
@@ -83,6 +85,7 @@ function createGamesTable() {
                 item : 'Cash',
                 harga: 12000,
                 categoryId: 1,
+                popular: 0,
             },
             {
                 id : 3,
@@ -92,6 +95,7 @@ function createGamesTable() {
                 item : 'Gems',
                 harga: 4000,
                 categoryId: 3,
+                popular: 0,
             },
             // {
             //     id : 4,
@@ -102,12 +106,14 @@ function createGamesTable() {
             //     harga: 111
             // },
             {
+                id: 5,
                 nama : 'Mobile Legends' ,
                 logo : '../assets/photos/games/ML.png' ,
                 genre : 'Multiplayer online battle arena ',
                 item : 'Diamonds',
                 harga: 8000,
                 categoryId: 2,
+                popular: 1,
             },
             {
                 id : 4,
@@ -117,6 +123,7 @@ function createGamesTable() {
                 item : 'Golds',
                 harga: 3000,
                 categoryId: 5,
+                popular: 0,
             },
             // {
             //     id : 5,
@@ -134,6 +141,7 @@ function createGamesTable() {
                 item : 'Diamonds',
                 harga: 6000,
                 categoryId: 5,
+                popular: 1,
             },
             {
                 id : 7,
@@ -141,8 +149,9 @@ function createGamesTable() {
                 logo : '../assets/photos/games/hogwarts.webp' ,
                 genre : 'Open world game',
                 item : 'Coins',
-                harga: 111,
+                harga: 8600,
                 categoryId: 6,
+                popular: 1,
             },
             {
                 id : 8,
@@ -152,6 +161,7 @@ function createGamesTable() {
                 item : 'Gems',
                 harga: 6700,
                 categoryId: 4,
+                popular: 0,
             },
             {
                 id : 9,
@@ -161,6 +171,7 @@ function createGamesTable() {
                 item : 'Credits',
                 harga: 6500,
                 categoryId: 1,
+                popular: 1,
             },
             {
                 id : 10,
@@ -170,6 +181,7 @@ function createGamesTable() {
                 item : 'Diamonds',
                 harga: 7900,
                 categoryId: 5,
+                popular: 0,
             },
             // {
             //     id : 11,
@@ -187,6 +199,7 @@ function createGamesTable() {
                 item : 'Gems',
                 harga: 4000,
                 categoryId: 2,
+                popular: 0,
             },
         ]
 
@@ -239,31 +252,40 @@ function createTestimonialsTable() {
     showTestimonials();
 }
 
-function showGames(category, keyword){
-    let bungkus = document.getElementById('section-games-promo');
+function showGames(category){
+  
+    let bungkusPopular = document.getElementById('section-games-promo');
+    let bungkusGameLists = document.getElementById('gamelists');
     let games = JSON.parse(localStorage.getItem('games'));
-    
+    let popularGames = [];
+
+    let keyword = document.getElementById('searchGameInput').value;
 
     if (category || keyword) {
-
         let params = {
             categoryId: category,
             keyword: keyword,
         }
-
-        let result = filterBy(games, params);
+    
+        games = filterBy(games, params);
 
        
     }
 
 
-
-    let content = ""; // Inisialisasi variabel string untuk menyimpan konten
-   
-    for (const game of games) {
-        const {id, nama, logo, genre, item, harga, categoryId} = game;
+    //Game Populer
+    for (const gmsP of games) {
+        const {id, nama, logo, genre, item, harga, categoryId, popular} = gmsP;
+      
+        if (popular === 1) {
+            popularGames.push(gmsP);
+        }
+    }
+    let gamePopular = ""; // Inisialisasi variabel string untuk menyimpan konten
+    for (const gmsP of popularGames) {
+        const {id, nama, logo, genre, item, harga, categoryId, popular} = gmsP;
         let rupiah = formatRupiah(harga);
-        content += `
+        gamePopular += `
             <div class="swiper-slide position-relative card-holder">
                 <div class="card-arvi">
                     <img src="${logo}" class="card-img-top" alt="...">
@@ -287,8 +309,52 @@ function showGames(category, keyword){
             </div>
         `;
     }
+    bungkusPopular.innerHTML = gamePopular; // Menetapkan konten baru ke elemen
+    
 
-    bungkus.innerHTML = content; // Menetapkan konten baru ke elemen
+  
+
+
+
+    //Game List
+    let contentGameLists = ""; // Inisialisasi variabel string untuk menyimpan konten
+    if (games.length < 1) {
+        contentGameLists = 'Game tidak ditemukan'
+    }
+    for (const game of games) {
+        const {id, nama, logo, genre, item, harga, categoryId, popular} = game;
+        let rupiah = formatRupiah(harga);
+      
+        contentGameLists += `
+            <div class="col-lg-3 mb-4">
+                <a href="#" class="gamelists-link">
+                
+                <div class="card-arvi">
+                    <img src="${logo}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-title" style="font-weight: bold; font-size: 24px;">${nama}</h6>
+                        <div class="d-flex">
+                            <span class="badge badge-pill discount-precentage">${genre}</span>
+                            <span class="badge badge-pill discount-price"></span>
+                        </div>
+                        <p class="mt-1 mb-0" style="font-size: 14px;">Start From:</p>
+                        <h5 class="mt-1" style="font-weight: bold;">${rupiah} <span style="font-size: 12px; color: #989898;">/10 ${item}</span> </h5>
+                        <div class="d-flex align-items-center">
+                            <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
+                            <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
+                            <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
+                            <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
+                            <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
+                            <span style="color: #989898;">(972)</span>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            
+            </div>
+        `;
+    }
+    bungkusGameLists.innerHTML = contentGameLists; // Menetapkan konten baru ke elemen
 }
 
 function showGamesCategory(){
