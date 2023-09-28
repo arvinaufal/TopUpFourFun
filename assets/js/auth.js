@@ -1,3 +1,4 @@
+
 // Contoh: Mengubah volume
 document.getElementById("loginPageAudio").volume = 0.08; 
 function createAdminUser() {
@@ -37,8 +38,8 @@ function login(){
             let loginUsers = JSON.parse(localStorage.getItem('loginUsers')) || [];
 
             // Hapus pengguna sebelumnya dari data login
-            loginUsers = loginUsers.filter(user => user.email !== emailInput);
-
+            // loginUsers = loginUsers.filter(user => user.email !== emailInput);
+            localStorage.removeItem('loginUsers');
             loginUsers.push(loggedInUser);
             localStorage.setItem('loginUsers', JSON.stringify(loginUsers));
 
@@ -190,6 +191,30 @@ function register(){
 
 
     //Tambahan ketika udah login maka masukkan informasi email ke dalam localStorage
+}
+
+
+function logout(){
+
+    Swal.fire({
+        title: 'Yakin?',
+        text: "Apakah Anda yakin ingin keluar dari aplikasi?",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'Ok',
+        cancelButtonText: 'Tidak',
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        allowEnterKey: false,
+    }).then((result) => {
+        if (result.isConfirmed) {
+            localStorage.removeItem('loginUsers');
+
+
+            window.location.href = '../pages/index.html';
+        }
+    });
 }
 
 // Panggil fungsi ini saat halaman dimuat
