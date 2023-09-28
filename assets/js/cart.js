@@ -24,6 +24,48 @@
     // Export fungsi testess jika perlu
 //     window.testess = testess;
 // });
+function getBannerDetailGame(){
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    let gameId = cart.gameId;
+    let games = JSON.parse(localStorage.getItem('games'));
+    let banner = null;
+    let name = null;
+    for (const i of games) {
+        if (i.id === gameId) {
+            nama = i.nama;
+            deskripsi = i.deskripsi;
+            banner = i.banner;
+        }
+    }
+
+    let bungkusBanner = document.getElementById('banner-detail-img');
+    let bungkusDesc = document.getElementById('game-detail-desc');
+    bungkusBanner.innerHTML = `<img src="${banner}" alt="TopUpFourFun Banner" class="img-fluid" style="border-radius: 20px; box-shadow: 4px 6px 8px rgba(0,0,0,0.5);">`;
+    bungkusDesc.innerHTML = 
+        `
+            <h2 style="color: white;"><b>${nama}</b></h2>
+            <p class="text-justify mt-4" style="color: white;">
+                ${deskripsi}
+            </p>
+            
+        `;
+
+        // <p class="text-justify">
+            //     Top up ML Diamond, Twilight Pass, dan Weekly Pass hanya dalam hitungan detik! Cukup masukkan User ID dan Zone ID MLBB Anda, pilih jumlah Diamond yang Anda inginkan, selesaikan pembayaran, dan Diamond akan secara langsung ditambahkan ke akun Mobile Legends Anda.
+            // </p>
+            // <p class="text-justify">
+            //     Bayarlah menggunakan Codacash, GoPay, ShopeePay, Dana, OVO, LinkAja, Telkomsel, Indosat, Tri, XL, Bank Transfer, QRIS, Indomaret, Alfamart, Kredivo, Kartu Kredit, dan Doku Wallet.
+            // </p>
+            // <p class="text-justify">
+            //     Harga sudah termasuk PPN. Informasi tambahan, untuk transaksi menggunakan Telkomsel akan dikenakan biaya tambahan pajak.
+            // </p>
+            // <p class="text-justify warning">
+            //     PERINGATAN: Harga sudah termasuk PPN. Informasi tambahan, untuk transaksi menggunakan Telkomsel akan dikenakan biaya tambahan pajak.
+            // </p>
+    
+
+
+}
 function getToken(){
     let cart = JSON.parse(localStorage.getItem('cart'));
     document.getElementById('token').value = cart.token;
@@ -388,4 +430,5 @@ window.onload = function() {
     // showUserLoginStatus();
     getToken();
     showPlayerId();
+    getBannerDetailGame();
 }
