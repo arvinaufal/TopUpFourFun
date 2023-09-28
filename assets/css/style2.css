@@ -362,6 +362,10 @@ color: #000000;
     color: white; /* Ganti dengan warna teks yang Anda inginkan */
     text-decoration: none; 
   }
+  .gamelists-link {
+    color: black; /* Ganti dengan warna teks yang Anda inginkan */
+    text-decoration: none; 
+  }
 
 
 /* Responsive */
