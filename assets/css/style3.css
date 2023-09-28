@@ -175,15 +175,6 @@
     font-size: 22px;
     font-weight: 600;
 }
-
-.btn-group {
-    font-family: 'Poppins';
-
-}
-
-.dropdown-menu {
-    font-family: 'Poppins';
-}
 /* Service End */
 
 /* product start */
@@ -310,45 +301,6 @@ color: #000000;
 .carousel-item{
     margin-left: 8em !important;
 }
-
-
-.card-img-top{
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    min-height: 60%;
-    
-}
-.card-arvi {
-    border-radius: 24px;
-    box-shadow: rgba(0, 0, 0, 0.2) 4px 6px 12px 0px;
-  
-  }
-  
-  .card-body {
-    padding: 12px;
-  }
-
-  .discount-precentage {
-    background-color: #b86bf3;
-  }
-  
-  .discount-price {
-    color: #989898 !important; 
-    text-decoration: line-through;
-  }
-
-  .star-rating{
-    width: 10px !important;
-    height: 10px !important;
-    margin-right: 3px;
-  }
-
-  .card-holder {
-    min-width: 200px;
-    display: flex;
-    margin: 12px;
-   
-  }
 
 
 /* Responsive */
