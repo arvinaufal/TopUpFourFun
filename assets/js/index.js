@@ -66,7 +66,7 @@ function createGamesTable() {
                 harga: 3000,
                 categoryId: 6,
                 popular: 1,
-                banner : '../',
+                banner : '../assets/photos/bannerGI.jpg',
                 deskripsi: 'Genshin Impact adalah permainan yang bergenre dunia terbuka (open world) sekaligus bermain peran aksi. Pada permainan ini, pemain memungkinkan untuk mengendalikan salah satu karakter yang dapat digantikan di dalam sebuah party (kelompok). Karakter-karakter yang ditukarkan dapat dilakukan dengan cepat selama melakukan kombat sehingga memungkinkan pemain untuk menggunakan kombinasi kemampuan dan serangan yang berbeda. Karakter yang dapat memiliki kemampuan diperkuat dengan berbagai cara, seperti menaikkan level-nya secara langsung dan memperkuat artefak beserta senjata yang dapat digunakan oleh seorang karakter.Selain berpetualang, pemain dapat mencoba berbagai tantangan untuk mendapatkan hadiah.'
             },
             {
@@ -102,7 +102,7 @@ function createGamesTable() {
                 harga: 4000,
                 categoryId: 3,
                 popular: 0,
-                banner : '../',
+                banner : '../assets/photos/bannerGTP.jpg',
                 deskripsi: 'Growtopia adalah permainan video kotak pasir MMO 2D di mana hampir semua yang ada di gim ini dapat tumbuh dari biji pohon. Tidak ada tujuan. Namun, ada sistem pencapaian, pencarian epik, dan pencarian lainnya dari NPC. Pemain dapat mengunjungi dunia orang lain atau menciptakan dunia mereka sendiri. Ketika seorang pemain menciptakan dunia baru, dunia akan dihasilkan secara prosedural. Dunia di Growtopia memiliki ukuran yang sama, kecuali dunia khusus (seperti TINY). Pemain dapat mematahkan dan membangun balok, mendapatkan biji atau permata dari balok, menanam benih, dan memanen pohon. Pemain tidak dapat melakukan aktivitas ini jika dunia atau area yang mereka pukul dikunci oleh orang lain'
             },
             // {
@@ -166,7 +166,7 @@ function createGamesTable() {
                 harga: 8600,
                 categoryId: 6,
                 popular: 1,
-                banner : '../',
+                banner : '../assets/photos/bannerHL.jpg',
                 deskripsi: 'Hogwarts Legacy adalah permainan bermain peran aksi yang dimainkan dalam sudut pandang orang ketiga. Itu diatur di Sekolah Sihir Hogwarts dan daerah sekitarnya, dipengaruhi oleh waralaba Dunia Sihir. Selama pembuatan karakter, pemain dapat memilih penampilan karakter, jenis kelamin, suara, dan tipe tubuh. Mereka juga dapat memilih salah satu dari empat Asrama Hogwarts. Saat pemain melanjutkan permainan, karakter pemain mereka belajar merapal mantra, membuat ramuan, dan menguasai kemampuan bertarung, yang pada akhirnya mengembangkan gaya bertarung khusus mereka sendiri. Melalui tantangan dalam game, karakter pemain dapat memperoleh poin pengalaman untuk mendapatkan level, yang memungkinkan pemain mengakses dan meningkatkan berbagai mantra, bakat, dan kemampuan.'
             },
             {
