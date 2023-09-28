@@ -64,6 +64,7 @@ function createGamesTable() {
                 genre : 'Open World',
                 item : 'Diamonds',
                 harga: 3000,
+                categoryId: 1,
             },
             {
                 id : 1, 
@@ -72,6 +73,7 @@ function createGamesTable() {
                 genre : 'Online multiplayer strategy game',
                 item : 'Diamonds',
                 harga: 10000,
+                categoryId: 5,
             },
             {
                 id : 2,
@@ -79,7 +81,8 @@ function createGamesTable() {
                 logo : '../assets/photos/games/free fire.png' ,
                 genre : 'Battle Royale',
                 item : 'Cash',
-                harga: 12000
+                harga: 12000,
+                categoryId: 1,
             },
             {
                 id : 3,
@@ -87,7 +90,8 @@ function createGamesTable() {
                 logo : '../assets/photos/games/growtopia.png' ,
                 genre : 'Multiplayer online sandbox',
                 item : 'Gems',
-                harga: 4000
+                harga: 4000,
+                categoryId: 3,
             },
             // {
             //     id : 4,
@@ -102,7 +106,8 @@ function createGamesTable() {
                 logo : '../assets/photos/games/ML.png' ,
                 genre : 'Multiplayer online battle arena ',
                 item : 'Diamonds',
-                harga: 8000
+                harga: 8000,
+                categoryId: 2,
             },
             {
                 id : 4,
@@ -110,7 +115,8 @@ function createGamesTable() {
                 logo : '../assets/photos/games/state of survival.png' ,
                 genre : 'Online mobile strategy game',
                 item : 'Golds',
-                harga: 3000
+                harga: 3000,
+                categoryId: 5,
             },
             // {
             //     id : 5,
@@ -126,7 +132,8 @@ function createGamesTable() {
                 logo : '../assets/photos/games/clashroyale.jpeg' ,
                 genre : 'Online multiplayer strategy game',
                 item : 'Diamonds',
-                harga: 6000
+                harga: 6000,
+                categoryId: 5,
             },
             {
                 id : 7,
@@ -134,7 +141,8 @@ function createGamesTable() {
                 logo : '../assets/photos/games/hogwarts.webp' ,
                 genre : 'Open world game',
                 item : 'Coins',
-                harga: 111
+                harga: 111,
+                categoryId: 6,
             },
             {
                 id : 8,
@@ -142,7 +150,8 @@ function createGamesTable() {
                 logo : '../assets/photos/games/stumble.png' ,
                 genre : 'Multiplayer party knockout game ',
                 item : 'Gems',
-                harga: 6700
+                harga: 6700,
+                categoryId: 4,
             },
             {
                 id : 9,
@@ -150,7 +159,8 @@ function createGamesTable() {
                 logo : '../assets/photos/games/pubg.png' ,
                 genre : 'Battle Royale',
                 item : 'Credits',
-                harga: 6500
+                harga: 6500,
+                categoryId: 1,
             },
             {
                 id : 10,
@@ -158,7 +168,8 @@ function createGamesTable() {
                 logo : '../assets/photos/games/hay day.jpeg' ,
                 genre : 'Online multiplayer strategy game',
                 item : 'Diamonds',
-                harga: 7900
+                harga: 7900,
+                categoryId: 5,
             },
             // {
             //     id : 11,
@@ -174,7 +185,8 @@ function createGamesTable() {
                 logo : '../assets/photos/games/brawl.jpeg' ,
                 genre : 'Multiplayer online battle arena',
                 item : 'Gems',
-                harga: 4000
+                harga: 4000,
+                categoryId: 2,
             },
         ]
 
@@ -227,15 +239,29 @@ function createTestimonialsTable() {
     showTestimonials();
 }
 
-function showGames(){
+function showGames(category, keyword){
     let bungkus = document.getElementById('section-games-promo');
     let games = JSON.parse(localStorage.getItem('games'));
+    
+
+    if (category || keyword) {
+
+        let params = {
+            categoryId: category,
+            keyword: keyword,
+        }
+
+        let result = filterBy(games, params);
+
+       
+    }
+
 
 
     let content = ""; // Inisialisasi variabel string untuk menyimpan konten
    
     for (const game of games) {
-        const {id, nama, logo, genre, item, harga} = game;
+        const {id, nama, logo, genre, item, harga, categoryId} = game;
         let rupiah = formatRupiah(harga);
         content += `
             <div class="swiper-slide position-relative card-holder">
@@ -247,7 +273,7 @@ function showGames(){
                             <span class="badge badge-pill discount-precentage">${genre}</span>
                         </div>
                         <p class="mt-1 mb-0" style="font-size: 14px;">Start From:</p>
-                        <h5 class="mt-1" style="font-weight: bold;">${rupiah} <span style="font-size: 12px; color: #989898;">/10 diamonds</span> </h5>
+                        <h5 class="mt-1" style="font-weight: bold;">${rupiah} <span style="font-size: 12px; color: #989898;">/${item}</span> </h5>
                         <div class="d-flex align-items-center">
                             <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">
                             <img class="star-rating" src="../assets/photos/icon-bintang.png" alt="">

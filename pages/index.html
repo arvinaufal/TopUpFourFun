@@ -48,11 +48,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav m-auto">
-            <a class="nav-link active" href="#">Beranda</a>
-            <a class="nav-link" href="#kategori">Kategori</a>
-            <a class="nav-link" href="#promo">Promo</a>
+            <a class="nav-link" href="#" style="font-weight: 400;">Beranda</a>
+            <a class="nav-link" href="#kategori" style="font-weight: 400;">Kategori</a>
+            <a class="nav-link" href="#promo" style="font-weight: 400;">Promo</a>
             <!-- <a class="nav-link" href="#">Products</a> -->
-            <a class="nav-link" href="#testimoni">Testimoni</a>
+            <a class="nav-link" href="#testimoni" style="font-weight: 400;">Testimoni</a>
             <!-- <a class="nav-link" href="#">Contact</a> -->
           </div>
           <div class="icons mt-4 mt-sm-0 text-center" id="user-status">
@@ -72,9 +72,9 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-5 content-left">
-            <p class="label">Top Up Termurah </p>
-            <h1 class="heading">Cuman Ada Di Sini</h1>
-            <p class="subheading">
+            <p class="label" style="color: white;">Top Up Termurah </p>
+            <h1 class="heading" style="color: white;">Cuman Ada Di Sini</h1>
+            <p class="subheading" style="color: white;">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, ea.
             </p>
             
@@ -111,8 +111,23 @@
 
     <!-- About Start -->
     <section class="about section-margin" id="about">
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="input-group border rounded-pill p-2">
+              <input type="text" class="form-control border-0" placeholder="Cari game..." style="border-top-left-radius: 20px; border-bottom-left-radius: 20px; border-right: none; border-width: 2px;">
+              <div class="input-group-append">
+                <button class="btn btn-primary" style="border-radius: 20px; width: 100px; border-width: 2px;" type="button">
+                  Cari
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <div class="container">
-        <div class="row align-items-center">
+        <!-- <div class="row align-items-center">
           <div class="col-lg-5 mb-5 mb-lg-0">
             <div class="image-box m-auto m-lg-0">
               
@@ -130,7 +145,7 @@
 
             <a href="#" class="btn btn-about px-4 py-2 py-sm-3">Contact Us</a>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
     <!-- About End -->
@@ -392,6 +407,7 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+    
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -399,6 +415,13 @@
     <script src="/assets/js/index.js"></script>
     <script src="/assets/js/script2.js"></script>
     <script src="/assets/js/auth.js"></script>
+    
+    <script>
+      document.getElementById('searchButton').addEventListener('click', function() {
+        let keyword = document.getElementById('searchInput').value;
+        showGames(null, keyword);
+      });
+    </script>
 </html>
 
 
