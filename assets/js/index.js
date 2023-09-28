@@ -327,12 +327,11 @@ function showTestimonials(){
 function showUserLoginStatus(){
     let bungkus = document.getElementById('user-status');
     let userLogin = JSON.parse(localStorage.getItem('loginUsers'));
-    console.log(userLogin);
     if (userLogin !== null) {
         let user = userLogin[userLogin.length - 1].name
         bungkus.innerHTML = `
 
-        <i class="bx bxs-user" style="color: white; font-size: large;"> ${user}</i>
+        <i class="bx bxs-user" style="color: white; font-size: large; margin: 20px;"> ${user}</i>
         <div class="btn btn-primary btn-sm" onClick="logout()" style="border-radius: 20px; width: 80px; font-weight: bold; font-size: medium;">Logout</div>
         `; // Menetapkan konten baru ke elemen
     }else{
@@ -344,9 +343,7 @@ function showUserLoginStatus(){
     }
 }
 
-function logout(){
-    console.log('tes');
-}
+
 
 
 
