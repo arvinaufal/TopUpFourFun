@@ -16,7 +16,7 @@
     //     }).then((result) => {
     //         if (result.isConfirmed) {
     //             // localStorage.removeItem('loginUsers');
-    //             // window.location.href = '../pages/index.html';
+    //             // window.location.href = 'pages/index.html';
     //         }
     //     });
     // }
@@ -36,32 +36,32 @@ function createPaymentTable() {
             {
                 id : 1, 
                 nama : 'Gopay' ,
-                logo : '../assets/photos/payment/gopay-1.jpg' ,
+                logo : 'assets/photos/payment/gopay-1.jpg' ,
             },
             {
                 id : 2, 
                 nama : 'OVO' ,
-                logo : '../assets/photos/payment/ovo.jpeg' ,
+                logo : 'assets/photos/payment/ovo.jpeg' ,
             },
             {
                 id : 3, 
                 nama : 'QRIS' ,
-                logo : '../assets/photos/payment/qris copy.png' ,
+                logo : 'assets/photos/payment/qris copy.png' ,
             },
             {
                 id : 4, 
                 nama : 'Indomart' ,
-                logo : '../assets/photos/payment/indomaret.jpeg' ,
+                logo : 'assets/photos/payment/indomaret.jpeg' ,
             },
             {
                 id : 5, 
                 nama : 'Alfamart' ,
-                logo : '../assets/photos/payment/logo-alfamart.jpg' ,
+                logo : 'assets/photos/payment/logo-alfamart.jpg' ,
             },
             {
                 id : 6, 
                 nama : 'Transfer Bank' ,
-                logo : '../assets/photos/payment/logo-semua-bank-14.png' ,
+                logo : 'assets/photos/payment/logo-semua-bank-14.png' ,
             },
            
         ]
