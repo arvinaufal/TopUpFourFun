@@ -10,7 +10,7 @@ function createCategoriesTable() {
             {
                 id : 1, 
                 nama : 'Battle Royale' ,
-                logo : '/assets/photos/game-category/br.png' ,
+                logo : 'assets/photos/game-category/br.png' ,
             },
             {
                 id : 2, 
