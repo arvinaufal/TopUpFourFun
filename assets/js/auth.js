@@ -10,7 +10,7 @@ function createAdminUser() {
             name: 'Admin Kel 4',
             username: 'admin',
             email: 'admin@gmail.com',
-            password: 'Admin123'
+            password: '11111'
         };
         users.push(user);
         localStorage.setItem('users', JSON.stringify(users));
@@ -57,7 +57,7 @@ function login(){
                 allowEnterKey: false,
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = '../pages/index.html';
+                    window.location.href = '../index.html';
                 }
             });
 
@@ -79,7 +79,7 @@ function login(){
             allowEnterKey: false,
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = '../pages/login.html';
+                window.location.href = '../login.html';
             }
         });
     }
@@ -96,7 +96,7 @@ function register(){
     let passwordInput = document.getElementById('password-register').value;
     let passwordKonfirmasiInput = document.getElementById('konfirmasi-password-register').value;
 
-
+    
     Swal.fire({
         title: 'Mohon Tunggu',
         showConfirmButton: false,
@@ -125,7 +125,7 @@ function register(){
                 allowEnterKey: false,
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = '../pages/register.html';
+                    window.location.href = '../register.html';
                 }
             });
          
@@ -148,7 +148,7 @@ function register(){
                     allowEnterKey: false,
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location.href = '../pages/register.html';
+                        window.location.href = '../register.html';
                     }
                 });
                
@@ -177,7 +177,7 @@ function register(){
                     allowEnterKey: false,
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location.href = '../pages/login.html';
+                        window.location.href = '../login.html';
                     }
                 })
     
@@ -194,32 +194,7 @@ function register(){
 }
 
 
-function logout(){
 
-    Swal.fire({
-        title: 'Yakin?',
-        text: "Apakah Anda yakin ingin keluar dari aplikasi?",
-        icon: 'question',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        confirmButtonText: 'Ok',
-        cancelButtonText: 'Tidak',
-        allowOutsideClick: false,
-        allowEscapeKey: false,
-        allowEnterKey: false,
-    }).then((result) => {
-        if (result.isConfirmed) {
-            localStorage.removeItem('loginUsers');
-
-
-            window.location.href = '../pages/index.html';
-        }
-    });
-}
-
-docment.getElementById('logoutButton').addEventListener('click',function(){
-    logout();
-});
 // Panggil fungsi ini saat halaman dimuat
 window.onload = function() {
     createAdminUser();

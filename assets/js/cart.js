@@ -124,7 +124,7 @@ function cekCart(){
             allowEnterKey: false,
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = '../pages/index.html';
+                window.location.href = 'index.html';
             }
         });
     }
@@ -767,7 +767,7 @@ function showUserLoginStatus(){
                     // localStorage.clear();
                     localStorage.removeItem("cart");
 
-                    window.location.href = '../pages/index.html';
+                    window.location.href = 'index.html';
                 }
             });
         }

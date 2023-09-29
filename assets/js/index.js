@@ -502,7 +502,32 @@ function toCart(gameId) {
 
 
 
+function logout(){
 
+    Swal.fire({
+        title: 'Yakin?',
+        text: "Apakah Anda yakin ingin keluar dari aplikasi?",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'Ok',
+        cancelButtonText: 'Tidak',
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        allowEnterKey: false,
+    }).then((result) => {
+        if (result.isConfirmed) {
+            localStorage.removeItem('loginUsers');
+
+
+            window.location.href = 'index.html';
+        }
+    });
+}
+
+// document.getElementById('logoutButton').addEventListener('click',function(){
+//     logout();
+// });
 
 
 window.onload = function() {
