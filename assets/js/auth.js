@@ -57,7 +57,7 @@ function login(){
                 allowEnterKey: false,
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = '../index.html';
+                    window.location.href = 'index.html';
                 }
             });
 
@@ -79,7 +79,7 @@ function login(){
             allowEnterKey: false,
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = '../login.html';
+                window.location.href = 'login.html';
             }
         });
     }
@@ -125,7 +125,7 @@ function register(){
                 allowEnterKey: false,
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = '../register.html';
+                    window.location.href = 'register.html';
                 }
             });
          
@@ -148,7 +148,7 @@ function register(){
                     allowEnterKey: false,
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location.href = '../register.html';
+                        window.location.href = 'register.html';
                     }
                 });
                
@@ -177,7 +177,7 @@ function register(){
                     allowEnterKey: false,
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location.href = '../login.html';
+                        window.location.href = 'login.html';
                     }
                 })
     
