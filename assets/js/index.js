@@ -249,19 +249,19 @@ function createTestimonialsTable() {
                 id : 1, 
                 nama : 'Andi' ,
                 status : 'ProGamer' ,
-                testimoni : 'Saya senang, saya senang' ,
+                testimoni : 'TopUp4Fun memberikan layanan yang cepat dan efisien. Saya sangat puas dengan pengalaman belanja online di sini!' ,
             }, 
             {
                 id : 2, 
                 nama : 'Dina' ,
                 status : 'Pro Gramer' ,
-                testimoni : 'Saya senang juga, saya senang juga' ,
+                testimoni : 'Belanja di TopUp4Fun sangat praktis dan terjamin keamanannya.' ,
             },
             {
                 id : 3, 
                 nama : 'Doni' ,
                 status : 'Programmer' ,
-                testimoni : 'Saya kayaknya senang juga, saya kayaknya senang juga' ,
+                testimoni : 'Saya selalu mendapatkan voucher game dengan harga terbaik di TopUp4Fun.' ,
             },
            
            

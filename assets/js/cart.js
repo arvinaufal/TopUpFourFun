@@ -473,18 +473,40 @@ function showUserLoginStatus(){
                 if (result.isConfirmed) {
                     let cartData = JSON.parse(localStorage.getItem('cart'));
                     let userIdLd = cartData.playerId;
+                    
+                    if (userIdLd.length > 4) {
+                        Swal.fire({
+                            title: 'Gagal!',
+                            text: "Maksimal hanya 5 User ID yang dapat ditambahkan!",
+                            icon: 'error',
+                            showCancelButton: false,
+                            confirmButtonColor: '#3085d6',
+                            confirmButtonText: 'Ok',
+                            allowOutsideClick: false,
+                            allowEscapeKey: false,
+                            allowEnterKey: false,
+                        });
+
+                        // document.getElementById('user_id').value = null;
+                        showPlayerId();
+                        return;
+                    }
+
+
                     let exist = false;
                     if (userIdLd.length > 0) {
+                    
             
-                        
                         for (const i of userIdLd) {
-                            if(i === userId){
+   
+                            if(i.userId === userId){
+                        
                                 exist = true;
                             }
                         }
                     }
 
-
+            
                     if (exist) {
                         
                         Swal.fire({
