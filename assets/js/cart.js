@@ -36,7 +36,7 @@ function createPaymentTable() {
             {
                 id : 1, 
                 nama : 'Gopay' ,
-                logo : 'assets/photos/payment/gopay-1.jpg' ,
+                logo : 'assets/photos/payment/gopay.png' ,
             },
             {
                 id : 2, 
